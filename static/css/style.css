@@ -1,0 +1,58 @@
+.slider-1 {
+    left: 5%;
+    position: relative;
+    text-align: center;
+    width: 47%;
+}
+
+.slider-1 h1 {
+    color: #454545;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.slider-1 img {
+    position: inherit;
+}
+
+.slider-1 p {
+    color: #454545;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 12px;
+    padding: 0;
+}
+
+.nivo-directionNav a {
+    background: #999999 none repeat scroll 0 0;
+    border-radius: 0 5px 5px 0;
+    color: #fdfdfd;
+    cursor: pointer;
+    font-size: 30px;
+    height: 75px;
+    line-height: 75px;
+    margin-top: -37px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 42px;
+    z-index: 9;
+}
+
+.nivo-directionNav a:hover {
+    background: #f6416c;
+}
+
+.nivo-directionNav a.nivo-nextNav {
+    border-radius: 5px 0 0 5px;
+}
+
+.slider-1 .shop-now {
+    border: 2px solid #666;
+    font-size: 16px;
+    height: 33px;
+    line-height: 29px;
+}
