@@ -611,3 +611,153 @@
          position: relative;
          margin-top: 10px;
      }
+     /*---Banner-Area ---*/
+     
+     .single-promo-banner.promo-banner-1 {
+         background: rgba(0, 0, 0, 0) url("../images/P1.jpg") no-repeat scroll right center / cover;
+     }
+     
+     .single-promo-banner.promo-banner-2 {
+         background: rgba(0, 0, 0, 0) url("../images/P2.jpg") no-repeat scroll right center / cover;
+     }
+     
+     .single-promo-banner.promo-banner-1,
+     .single-promo-banner.promo-banner-2 {
+         min-height: 600px;
+     }
+     
+     .promo-banner-1 .promo-banner-brief {
+         padding-left: 32%;
+         padding-top: 10%;
+     }
+     
+     .count-down .timer {
+         float: left;
+         padding: 75px 0 0 45px;
+     }
+     
+     .promo-banner-1 .promo-banner-brief h2,
+     .promo-banner-1 .promo-banner-brief h3,
+     .promo-banner-1 .promo-banner-brief h4 {
+         color: #fff;
+         text-transform: uppercase;
+     }
+     
+     .promo-banner-1 .promo-banner-brief h2 {
+         font-size: 71px;
+         font-weight: 400;
+         line-height: 56px;
+         margin-bottom: 20px;
+     }
+     
+     .promo-banner-1 .promo-banner-brief h3,
+     .promo-banner-1 .promo-banner-brief h4 {
+         font-size: 32px;
+     }
+     
+     .promo-banner-1 .promo-banner-brief h3 {
+         font-weight: 300;
+         line-height: 36px;
+         margin: 0;
+     }
+     
+     .promo-banner-1 .promo-banner-brief span {
+         font-size: 50px;
+     }
+     
+     .promo-banner-1 .promo-banner-brief h4 {
+         font-weight: 700;
+         line-height: 24px;
+         margin: 15px 0 0;
+     }
+     
+     .promo-banner-1 .shop-now {
+         margin-top: 40px;
+     }
+     
+     .cdown {
+         background: #323232 none repeat scroll 0 0;
+         color: #fff;
+         display: block;
+         font-size: 24px;
+         font-weight: 700;
+         height: 105px;
+         line-height: 36px;
+         margin-bottom: 10px;
+         padding-top: 17px;
+         text-align: center;
+         text-transform: uppercase;
+         width: 105px;
+     }
+     
+     .cdown:last-child {
+         margin-bottom: 0;
+     }
+     
+     .cdown span {}
+     
+     .cdown p {
+         margin: 8px 0 0;
+     }
+     
+     .style-2 .cdown {
+         font-size: 20px;
+         height: 70px;
+         line-height: 12px;
+         width: 70px;
+     }
+     
+     .upcomming-brief {
+         float: left;
+         padding: 95px 0 0 65px;
+     }
+     
+     .upcomming-brief h2,
+     .upcomming-brief h3 {
+         color: #333333;
+         line-height: 36px;
+     }
+     
+     .upcomming-brief h2 {
+         font-size: 20px;
+         font-weight: 400;
+         margin-bottom: 40px;
+     }
+     
+     .upcomming-brief h3 {
+         font-size: 33px;
+         font-weight: 300;
+         margin-bottom: 17px;
+         text-transform: uppercase;
+     }
+     
+     .upcomming-brief span {
+         font-weight: 700;
+     }
+     
+     .upcomming-brief li {
+         color: #333;
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 30px;
+         padding-left: 28px;
+         position: relative;
+         text-transform: uppercase;
+     }
+     
+     .upcomming-brief li::before {
+         background: #f6416c none repeat scroll 0 0;
+         border-radius: 100%;
+         content: "";
+         height: 10px;
+         left: 0;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 10px;
+     }
+     
+     .upcomming-brief .shop-now {
+         font-size: 16px;
+         margin-top: 55px;
+     }
