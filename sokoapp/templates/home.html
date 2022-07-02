@@ -4,6 +4,16 @@
 {% block content %}
 
 <div class="slideshow-container">
+
+     <!-- Preloader -->
+        {% comment %} <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">Preloader Close</div>
+            </div>
+            <div class="layer layer-one"><span class="overlay"></span></div>
+            <div class="layer layer-two"><span class="overlay"></span></div>
+            <div class="layer layer-three"><span class="overlay"></span></div>
+        </div> {% endcomment %}
     <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img src="{% static 'images/1.jpg' %}" style="width:100%">
@@ -17,7 +27,7 @@
 
     <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="{% static 'images/2.jpg' %}" style="width:100%">
+        <img src="{% static 'images/3.jpg' %}" style="width:100%">
         <div class="text">
             <h1 class="title1">Men's fashion collection</h1>
             <p class="slider-brief">Simply dummy text of the printing and typesetting industry. simply dummy text of the printing and typesetting industry.</p>
@@ -38,30 +48,60 @@
     </div>
 
 </div>    
-   {% comment %} <span><img src="{% static 'images/slider-border.png' %}" alt="" /></span> {% endcomment %}
 <div style="text-align:center">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
 </div>
 
+  <!-- collection-section -->
+        <section class="collection-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column sect1">
+                        <div class="single-item wow fadeInLeft animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box" id="bg1"style="">
+                                <h2>Get Discount <br />For Headphone</h2>
+                                <p>World Best Brands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                        <div class="single-item wow fadeInRight animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box" id="bg2"style="">
+                                <h2>Only For <br />Girls Fashion</h2>
+                                <p>Incredible Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- collection-section end -->
+
 <div class="container">
-<div>
-    <h2>Top Categories</h2>
-</div>
+    <div class="text-center">
+         <h2>Top Categories</h2>
+        <p> Follow the most popular trends and get exclusive items from castro shop</p>
+        <span><img src="{% static 'images/slider-border.png' %}" alt="" /></span> 
+    </div>
     <div class="row">
-        <div class="col-md-4">
-            <img src="{% static 'images/1.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="350" class="card-img-top image-fluid">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{% static 'images/4.png' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="250" class="card-img-top image-fluid">
             <h2>Men's fashion<br> collection</h2>
         </div>
-        <div class="col-md-4">
-            <img src="{% static 'images/2.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="350" class="card-img-top image-fluid">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="{% static 'images/2.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="250" class="card-img-top image-fluid">
             <h2>New fashion <br>collection</h2>
       
         </div>
-        <div class="col-md-4">
-               <img src="{% static 'images/3.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="350" class="card-img-top image-fluid">
-              <h3>Women'sfashion <br> collection</h3>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+               <img src="{% static 'images/3.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="250" class="card-img-top image-fluid">
+              <h3>Women's fashion <br> collection</h3>
+        </div>
+           <div class="col-lg-3 col-md-6 col-sm-12">
+               <img src="{% static 'images/1.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 5px 5px 10px rgba(3,3,3,0.7);"height="250" class="card-img-top image-fluid">
+              <h3>Kids fashion <br> collection</h3>
         </div>
     </div>
 </div>
