@@ -761,3 +761,20 @@
          font-size: 16px;
          margin-top: 55px;
      }
+     
+     .all-product-view {
+         background: #f1f1f1 none repeat scroll 0 0;
+         padding: 22px 0 14px;
+     }
+     
+     .all-product-brief h2 {
+         font-size: 28px;
+         font-weight: 500;
+         line-height: 35px;
+         margin-bottom: 4px;
+     }
+     
+     .all-product-view-link .shop-now {
+         font-size: 18px;
+         margin-top: 38px;
+     }
