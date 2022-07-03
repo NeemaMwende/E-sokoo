@@ -371,6 +371,28 @@ li.nav-item:hover {
     border-color: #F6416C;
 }
 
+.shop-now {
+    border: 1px solid #f6416c;
+    color: #afaaaa;
+    display: inline-block !important;
+    font-size: 15px;
+    height: 33px;
+    line-height: 31px;
+    margin-top: 15px;
+    padding: 0 13px;
+    text-transform: uppercase;
+}
+
+.shop-now:focus {
+    color: #333333;
+}
+
+.shop-now:hover {
+    background: #f6416c;
+    border-color: transparent;
+    color: rgb(2, 0, 0);
+}
+
 .single-collection:hover .collection-brief h2,
 .single-collection:hover .collection-brief ul li,
 .single-collection:hover .collection-brief .shop-now {
