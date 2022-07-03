@@ -851,7 +851,7 @@ li.nav-item:hover {
 }
 
 .testimonial-area {
-    background: rgba(0, 0, 0, 0) url("img/bg/testimonial-bg.jpg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../images/testimonial-bg.jpg") no-repeat scroll center center / cover;
     position: relative;
     z-index: 1;
 }
