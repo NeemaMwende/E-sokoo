@@ -596,9 +596,10 @@ li.nav-item:hover {
     clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%, 0 0);
 }
 
-.shop-block-one .inner-box .image-box .category.green-bg {}
 
-.shop-block-one .inner-box .image-box .category.red-bg {}
+/* .shop-block-one .inner-box .image-box .category.green-bg {}
+
+.shop-block-one .inner-box .image-box .category.red-bg {} */
 
 .shop-block-one .inner-box .image-box .info-list {
     position: absolute;
@@ -617,7 +618,7 @@ li.nav-item:hover {
 .shop-block-one .inner-box .image-box .info-list li {
     position: relative;
     display: inline-block;
-    float: left;
+    float: none;
     margin-right: 2px;
 }
 
@@ -644,7 +645,8 @@ li.nav-item:hover {
     font-weight: 600;
 }
 
-.shop-block-one .inner-box .image-box .info-list li a:hover {}
+
+/* .shop-block-one .inner-box .image-box .info-list li a:hover {} */
 
 .shop-block-one .inner-box .lower-content {
     position: relative;
@@ -660,7 +662,8 @@ li.nav-item:hover {
     margin-bottom: 3px;
 }
 
-.shop-block-one .inner-box .lower-content a:hover {}
+
+/* .shop-block-one .inner-box .lower-content a:hover {} */
 
 .shop-block-one .inner-box .lower-content .price {
     position: relative;
@@ -889,7 +892,8 @@ li.nav-item:hover {
     border-top: 1px solid #666;
 }
 
-.single-testimonial {}
+
+/* .single-testimonial {} */
 
 .client-photo {
     margin: auto;
