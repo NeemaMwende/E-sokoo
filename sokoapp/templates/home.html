@@ -3,11 +3,11 @@
 {% load bootstrap4 %}
 {% block content %}
 
+{% comment %} Bunner {% endcomment %}
 <div class="slideshow-container">
-
     <div class="mySlides fade">
   
-        <img src="{% static 'images/1.jpg' %}" style="width:100%">
+        <img src="{% static 'images/1.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
         <div class="text">
             <h1 class="title1"> <span id="fasho">New fashion</span> <br>collection</h1> 
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.<p>
@@ -18,7 +18,7 @@
 
     <div class="mySlides fade">
    
-        <img src="{% static 'images/2.jpg' %}" style="width:100%">
+        <img src="{% static 'images/2.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
         <div class="text">
             <h1 class="title1"> <span id="fasho">Men's fashion</span> <br> collection</h1>
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.</p>
@@ -29,12 +29,12 @@
     
     <div class="mySlides fade">
    
-        <img src="{% static 'images/3.jpg' %}" style="width:100%">
+        <img src="{% static 'images/3.jpg' %}"style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
         <div class="text">
             <h1 class="title1"> <span id="fasho">Women's fashion</span><br> collection</h1>
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Women's Wear Jeans Shirt.</p>
             <br>
-            <a href="#" class="btn2 mb-3">Explore Now<i class="fa-solid fa-arrow-up-right fa-2x"></i></a>
+            <a href="#" class="btn2 mb-3">Explore Now <i class="fa-solid fa-arrow-up-right fa-2x"></i></a>
         </div>   
     </div>
 </div>    
@@ -43,6 +43,8 @@
   <span class="dot"></span> 
   <span class="dot"></span> 
 </div>
+
+{% comment %} Bunner end {% endcomment %}
 
   <!-- collection-section -->
   <div class="container mt-5">
