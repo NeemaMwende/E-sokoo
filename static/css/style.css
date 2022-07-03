@@ -200,6 +200,11 @@ li.nav-item:hover {
     font-size: 48px;
 }
 
+#fash {
+    color: #cc0707;
+    font-size: 40px;
+}
+
 
 /* The dots/bullets/indicators */
 
@@ -665,13 +670,13 @@ li.nav-item:hover {
     margin: 0px;
 }
 
-.shop-section .filters {
+.shop-section {
     position: relative;
     display: block;
     margin-bottom: 48px;
 }
 
-.shop-section .filters .filter-tabs li {
+.shop-section .filter-tabs li {
     position: relative;
     display: inline-block;
     font-size: 17px;
@@ -683,12 +688,12 @@ li.nav-item:hover {
     transition: all 500ms ease;
 }
 
-.shop-section .filters .filter-tabs li:hover,
-.shop-section .filters .filter-tabs li.active {
+.shop-section.filter-tabs li:hover,
+.shop-section .filter-tabs li.active {
     color: #222;
 }
 
-.shop-section .filters .filter-tabs li:before {
+.shop-section .filter-tabs li:before {
     position: absolute;
     content: '';
     background: #828282;
@@ -700,8 +705,8 @@ li.nav-item:hover {
     transition: all 500ms ease;
 }
 
-.shop-section .filters .filter-tabs li:hover:before,
-.shop-section .filters .filter-tabs li.active:before {
+.shop-section .filter-tabs li:hover:before,
+.shop-section .filter-tabs li.active:before {
     transform: scale(1, 1);
 }
 
@@ -729,11 +734,6 @@ li.nav-item:hover {
 .promo-banner-1 .promo-banner-brief {
     padding-left: 32%;
     padding-top: 10%;
-}
-
-.count-down .timer {
-    float: left;
-    padding: 75px 0 0 45px;
 }
 
 .promo-banner-1 .promo-banner-brief h2,
@@ -775,38 +775,6 @@ li.nav-item:hover {
     margin-top: 40px;
 }
 
-.cdown {
-    background: #323232 none repeat scroll 0 0;
-    color: #fff;
-    display: block;
-    font-size: 24px;
-    font-weight: 700;
-    height: 105px;
-    line-height: 36px;
-    margin-bottom: 10px;
-    padding-top: 17px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 105px;
-}
-
-.cdown:last-child {
-    margin-bottom: 0;
-}
-
-.cdown span {}
-
-.cdown p {
-    margin: 8px 0 0;
-}
-
-.style-2 .cdown {
-    font-size: 20px;
-    height: 70px;
-    line-height: 12px;
-    width: 70px;
-}
-
 .upcomming-brief {
     float: left;
     padding: 95px 0 0 65px;
@@ -819,7 +787,7 @@ li.nav-item:hover {
 }
 
 .upcomming-brief h2 {
-    font-size: 20px;
+    font-size: 33px;
     font-weight: 400;
     margin-bottom: 40px;
 }
