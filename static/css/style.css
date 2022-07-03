@@ -118,14 +118,14 @@
      }
      
      li.nav-item:hover {
-         background-color: rgb(12, 12, 245);
+         background-color: rgb(0, 0, 10);
          font-size: 20px;
          color: white;
      }
      /* Slideshow container */
      
      .slideshow-container {
-         max-width: 100%;
+         max-width: 95%;
          position: relative;
          margin: auto;
      }
