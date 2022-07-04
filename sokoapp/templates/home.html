@@ -1,0 +1,557 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+{% comment %} Bunner {% endcomment %}
+<div class="slideshow-container">
+    <div class="mySlides fade">
+  
+        <img src="{% static 'images/1.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+        <div class="text">
+            <h1 class="title1"> <span id="fasho">new Fashion</span> <br>Collection</h1> 
+            <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.<p>
+                <br>
+                <a href="#" class="btn2 mb-2">Explore Now</a>
+        </div>      
+    </div>
+
+    <div class="mySlides fade">
+   
+        <img src="{% static 'images/2.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+        <div class="text">
+            <h1 class="title1"> <span id="fasho">men's Fashion</span> <br> Collection</h1>
+            <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.</p>
+            <br>
+            <a href="#"class="btn2 mb-3">Explore Now</a>
+        </div>
+    </div>
+    
+    <div class="mySlides fade">
+   
+        <img src="{% static 'images/3.jpg' %}"style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+        <div class="text">
+            <h1 class="title1"> <span id="fasho">women's Fashion</span><br> Collection</h1>
+            <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Women's looks.</p>
+            <br>
+            <a href="#" class="btn2 mb-3">Explore Now</a>
+        </div>   
+    </div>
+</div>    
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+{% comment %} Bunner end {% endcomment %}
+
+  <!-- collection-section -->
+  <div class="container mt-5">
+      <section class="collection-section ">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column sect1">
+                        <div class="single-item wow fadeInLeft animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box" id="bg1"style="">
+                                <h2>Get Discount <br />For Headphone</h2>
+                                <p>World Best Brands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                        <div class="single-item wow fadeInRight animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box" id="bg2"style="">
+                                <h2>Only For <br />Mens Fashion</h2>
+                                <p>Incredible Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </div>    
+<!-- collection-section end -->
+
+    <br><br><br>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h2>top Categories</h2>
+            <p> Follow the most popular trends and get exclusive items from castro shop</p>
+            <span><img src="{% static 'images/sb.png' %}" alt="" /></span> 
+        </div>
+        <br><br>
+        <div class="row text-center">
+            <div class="fashion col-lg-3 col-md-6 col-sm-12">
+                <div class="image"> <img src="{% static 'images/cloth.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 2px 2px 5px rgba(3,3,3,0.5);"height="250" class="card-img-top image-fluid"> </div> 
+                <h5 class="mt-3">men's Fashion<br> Collection</h5>
+            </div>
+            <div class="fashion col-lg-3 col-md-6 col-sm-12">
+                <div class="image"> <img src="{% static 'images/asc.jpg' %}" alt="" style="border-radius: 50%; box-shadow: 2px 2px 5px rgba(3,3,3,0.5);"height="250" class="card-img-top image-fluid"> </div> 
+                <h5 class="mt-3">women's Fashion <br> Collection</h5>
+            </div>
+           
+             <div class=" fashion col-lg-3 col-md-6 col-sm-12">
+                <div class="image"> <img src="{% static 'images/acc.jpeg' %}" alt="" style="border-radius: 50%; box-shadow: 2px 2px 5px rgba(3,3,3,0.5);"height="250" class="card-img-top image-fluid"> </div> 
+                <h5 class="mt-3">new Fashion <br>Collection</h5>
+            </div>
+            <div class="fashion col-lg-3 col-md-6 col-sm-12">
+                <div class="image"> <img src="{% static 'images/accm.jpg' %}" alt="" style="border-radius: 50%;  box-shadow: 2px 2px 5px rgba(3,3,3,0.5);"height="250" class="card-img-top image-fluid"> </div> 
+                <h5 class="mt-3">unisex Accessories <br> Collection</h5>
+            </div>
+         
+        </div>
+    </div>
+
+    <br><br><br>
+      <!-- NEW-COLLECTION START -->
+        <div class="new-collection-area fix margin-bottom-80 mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2 style="font-size:35px;">new Arrivals</h2>
+                        <br><br>
+                         <p> Follow the most popular trends and get exclusive items from E-Soko shop</p>
+                            <span><img src="{% static 'images/sb.png' %}" alt="" /></span> 
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
+                    <div class="single-collection">
+                        <div class="collection-photo ">
+                            <a href="#"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="collection-brief">
+                            <div class="text-right">
+                                <span class="new">new</span>
+                            </div>
+                            <h2>new <br /> <span>fashion</span></h2>
+                            <ul>
+                                <li>100% cotton</li>
+                                <li>high qualiety</li>
+                                <li><a style="text-decoration:none; color:black;" href="">Add to cart</a></li>
+                            </ul>
+                            <a href="#" class="shop-now active-shop-now">shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
+                    <div class="single-collection">
+                        <div class="collection-photo">
+                            <a href="#"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="collection-brief">
+                            <div class="text-right">
+                                <span class="new">new</span>
+                            </div>
+                            <h2>new <br /> <span>fashion</span></h2>
+                            <ul>
+                                <li>100% cotton</li>
+                                <li>high quality</li>
+                                <li><a style="text-decoration:none; color:black;"  href="">Add to cart</a></li>
+                            </ul>
+                            <a href="#" class="shop-now active-shop-now">shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
+                    <div class="single-collection">
+                        <div class="collection-photo">
+                            <a href="#"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="collection-brief">
+                            <div class="text-right">
+                                <span class="new">new</span>
+                            </div>
+                            <h2>new <br /> <span>fashion</span></h2>
+                            <ul>
+                                <li>100% cotton</li>
+                                <li>high quality</li>
+                                <li><a style="text-decoration:none; color:black;"  href="">Add to cart</a></li>
+                            </ul>
+                            <a href="#" class="shop-now active-shop-now">shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+              <div class="more-btn centred"><a href="" class="btn-one">Products</a></div>
+        </div>
+        <!-- NEW-COLLECTION END -->
+<br><br>
+       <!-- shop-section -->
+       <section class="text-center shop-section mt-5">
+        <div class="auto-container">
+            <div class="inner-container sec-pad">
+                <div class="sec-title">
+                    <h2>our Top Collection</h2>
+                    <p>There are some product that we featured for choose your best</p>
+                    <span><img src="{% static 'images/sb.png' %}" alt="" /></span> 
+                </div>
+                <br><br>
+                <div class="sortable-masonry">
+                    <div class="items-container row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals top_rate">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img src="  {% static 'images/shop1.jpg' %}" alt="">
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                          
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Cold Crewneck Sweater</a>
+                                        <span class="price">ksh. 1999.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop2.jpg' %}" alt="">
+                                    
+                                        <span class="category green-bg">New</span>
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                        
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Multi-Way Ultra Crop Top</a>
+                                        <span class="price">ksh. 1499.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller top_rate">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop3.jpg' %}" alt="">
+                                   
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Side-Tie Tank</a>
+                                        <span class="price">ksh. 1599.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop4.jpg' %}" alt="">
+                                      
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                          
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Cold Crewneck Sweater</a>
+                                        <span class="price">ksh. 1999.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller top_rate">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="{% static 'images/shop5.jpg' %}" alt="">
+                                       
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Side-Tie Tank</a>
+                                        <span class="price">ksh. 2599.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop6.jpg' %}" alt="">
+                                     
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                           
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Must-Have Easy Tank</a>
+                                        <span class="price">ksh. 1599.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals top_rate">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop7.jpg' %}" alt="">
+                                        <span class="category red-bg">Hot</span>
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                         
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Woven Crop Cami</a>
+                                        <span class="price">ksh. 999.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                          <img src="  {% static 'images/shop8.jpg' %}" alt="">
+                                     
+                                        <ul class="info-list clearfix">
+                                            <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
+                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"  href="product-details.html">Must-Have Easy Tank</a>
+                                        <span class="price">ksh. 999.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-btn centred"><a href="" class="btn-one">Products</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- shop-section end -->
+ <!-- PROMOTIONAL-BANNER START -->
+        <div class="promotional-banner-area clearfix p-0">
+            <div class="promotional-banner">
+                <div class="container-fluid p-0 overflow-hidden">
+                    <div class="row">
+                        <!-- Single-promo start -->
+                        <div class="col-lg-6 p-0">
+                            <div class="single-promo-banner promo-banner-1">
+                                <div class="promo-banner-brief">
+                                    <h2>sale !</h2>
+                                    <h3>up to <span>30%</span> off</h3>
+                                    <h4>mens best products</h4>
+                                    <a style="text-decoration:none;" class="shop-now active-shop-now" href="#">shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single-promo End -->
+                        <!-- Single-promo start -->
+                        <div class="col-lg-6 p-0">
+                            <div class="single-promo-banner promo-banner-2">
+                                <div class="promo-banner-brief">
+                                    <div class="upcomming-brief">
+                                        <h2> upcomming <span id="fash">Best</span> <br>collection,</h2>
+                                        <h3><span>degles</span> warm</h3>
+                                        <ul style="text-decoration:none;" >
+                                            <li style="text-decoration:none;">100% cotton</li>
+                                            <li style="text-decoration:none;">best manufacturing</li>
+                                            <li style="text-decoration:none;">high quality materials</li>
+                                        </ul>
+                                        <a style="text-decoration:none;" class="shop-now" href="#">pre order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single-promo End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PROMOTIONAL-BANNER END -->
+     <br><br>
+          <!-- ALL-PRODUCT-VIEW START -->
+        <div class="all-product-view-area mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="all-product-view">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-8 offset-md-1 offset-lg-2">
+                                    <div class="all-product-brief">
+                                        <h2>to view all E-Soko products together !!</h2>
+                                        <p>There are many variations of products at E-Soko which are available, you can view them and place your order </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="all-product-view-link">
+                                        <a style="text-decoration:none;" href="#" class="shop-now">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ALL-PRODUCT-VIEW END -->
+        <br>
+    
+ <!-- TESTIMONIAL-AREA START -->
+        <div class="testimonial-area mt-5">
+            <div class="testimonial">
+                <h2><sup><i class="sp-quote"></i></sup> they love us</h2>
+                <div class="testimonial-border">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="active-testimonial">
+                                    <div class="single-testimonial row">
+                                        <div class="col-lg-4">
+                                            <div class="client-photo">
+                                                <img src=" {% static 'images/t.png' %}" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="client-opinion">
+                                                <h3>Sir Felix</h3>
+                                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has rootsContrary to popular belief, Lorem Ipsum is not simply random text. It has roots. Contrary to popular belief, Lorem Ipsum is
+                                                    not simply random text. It has roots Contrary to popular belief, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-testimonial row">
+                                        <div class="col-lg-4">
+                                            <div class="client-photo">
+                                                <img src=" {% static 'images/t.png' %}" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="client-opinion">
+                                                <h3>Agness Mbiti</h3>
+                                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has rootsContrary to popular belief, Lorem Ipsum is not simply random text. It has roots. Contrary to popular belief, Lorem Ipsum is
+                                                    not simply random text. It has roots Contrary to popular belief, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TESTIMONIAL-AREA END -->
+
+        <br><br><br><br>
+        <!-- SERVICE-AREA START -->
+        <div class="service-area margin-bottom-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-service">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-car fs-2x"></i>
+                            </div>
+                            <div class="service-brief">
+                                <h3>free shipping</h3>
+                                <p>Shipping is done within East Africa and world at large at affordable price.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-service">
+                            <div class="service-icon">
+                              
+                                <i class="fa-solid fa-phone fs-2x"></i>
+                            
+                            </div>
+                            <div class="service-brief">
+                                <h3>help line</h3>
+                                <p>(+254) 1925184203 - call any time for E-Soko products enquiry and for any comment or complain.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-service">
+                            <div class="service-icon">
+                                <i class="fa-solid fa-business-time fs-2x"></i>
+                            </div>
+                            <div class="service-brief">
+                                <h3>money back guarantee</h3>
+                                <p>There are many factors and incase of anything money is guarantee.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICE-AREA END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 1000); // Change image every 2 seconds
+}
+</script>
+
+{% endblock %}
