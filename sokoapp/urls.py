@@ -8,6 +8,8 @@ urlpatterns=[
   
     url('', views.home, name='home'),
     url('women/', views.women, name='women'),
+    url('men/', views.men, name='men'),
+    url('shop/', views.shop, name='shop'),
     
    
 ]
