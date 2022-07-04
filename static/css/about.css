@@ -1,0 +1,297 @@
+/** page-title **/
+
+.page-title {
+    position: relative;
+    background: #edf0f5;
+    padding: 95px 0px 88px 0px;
+}
+
+.page-title .pattern-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: center;
+    background: rgba(0, 0, 0, 0) url("../images/page-title.jpg") no-repeat scroll center center / cover;
+    animation: slide 100s linear infinite;
+    -webkit-animation: slide 100s linear infinite;
+}
+
+@keyframes slide {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1920px 0;
+    }
+}
+
+@-webkit-keyframes slide {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1920px 0;
+    }
+}
+
+.page-title .content-box h1 {
+    position: relative;
+    display: block;
+    font-size: 46px;
+    line-height: 50px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+.page-title .content-box .bread-crumb li {
+    position: relative;
+    display: inline-block;
+    color: #848484;
+    padding-right: 16px;
+    margin-right: 3px;
+}
+
+.page-title .content-box .bread-crumb li a {
+    color: #848484;
+}
+
+.page-title .content-box .bread-crumb li:last-child {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.page-title .content-box .bread-crumb li:before {
+    position: absolute;
+    content: "\f105";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    color: #848484;
+    font-size: 15px;
+    top: 0px;
+    right: 0px;
+}
+
+.page-title .content-box .bread-crumb li:last-child:before {
+    display: none;
+}
+
+
+/** about-section **/
+
+.about-section {
+    position: relative;
+    padding: 120px 0px;
+}
+
+.about-section .text-inner h2 {
+    display: block;
+    font-size: 50px;
+    line-height: 65px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.about-section .text-inner h3 {
+    font-size: 26px;
+    line-height: 30px;
+    color: #848484;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+
+.about-section .text-inner p {
+    margin-bottom: 26px;
+}
+
+.about-section .text-inner .theme-btn-one {
+    margin-top: 16px;
+    padding: 19px 43px;
+}
+
+.about-section .image-box {
+    position: relative;
+    display: block;
+}
+
+.about-section .image-box img {
+    width: 100%;
+}
+
+.about-section .text-inner .box h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.about-section .text-inner .box {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.about-section .text-inner .box:last-child {
+    margin-bottom: 0px;
+}
+
+.about-section .text-inner .box p:last-child {
+    margin-bottom: 0px;
+}
+
+
+/** chooseus-section **/
+
+.chooseus-section {
+    position: relative;
+    background: #edf0f5;
+}
+
+.chooseus-section .content-column {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+.chooseus-section .image-column {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chooseus-section .content-column .inner-column {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 114px 15px 85px 15px;
+}
+
+.chooseus-section .content-column .content-box .single-item {
+    position: relative;
+    margin-bottom: 33px;
+    min-height: 85px;
+    padding: 2px 30px 0px 80px;
+}
+
+.chooseus-section .content-column .content-box .single-item .icon-box {
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    font-size: 50px;
+    line-height: 50px;
+    color: #222;
+}
+
+.chooseus-section .content-column .content-box .single-item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.chooseus-section .content-column .content-box .single-item p {
+    margin: 0px;
+    line-height: 24px;
+}
+
+
+/** team-section **/
+
+.team-section {
+    position: relative;
+    padding-top: 115px;
+}
+
+.team-block-one .inner-box {
+    position: relative;
+    display: block;
+}
+
+.team-block-one .inner-box .image-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #000;
+}
+
+.team-block-one .inner-box .image-box img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.team-block-one .inner-box:hover .image-box img {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.team-block-one .inner-box .image-box .social-links {
+    position: absolute;
+    left: 0px;
+    bottom: -55px;
+    width: 100%;
+    visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.team-block-one .inner-box:hover .image-box .social-links {
+    bottom: 30px;
+    visibility: visible;
+}
+
+.team-block-one .inner-box .image-box .social-links li {
+    position: relative;
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+.team-block-one .inner-box .image-box .social-links li a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+    background: #fff;
+    color: #222;
+    text-align: center;
+}
+
+.team-block-one .inner-box .image-box .social-links li a:hover {}
+
+.team-block-one .inner-box .lower-content {
+    position: relative;
+    padding-top: 27px;
+}
+
+.team-block-one .inner-box .lower-content h3 {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.team-block-one .inner-box .lower-content h3 a {
+    display: inline-block;
+    color: #222;
+}
+
+.team-block-one .inner-box .lower-content h3 a:hover {}
+
+.team-block-one .inner-box .lower-content .designation {
+    position: relative;
+    display: block;
+    margin: 0px;
+}
