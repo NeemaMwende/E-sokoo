@@ -819,6 +819,158 @@
         margin-top: 38px;
     }
     
+    .testimonial-area {
+        background: rgba(0, 0, 0, 0) url("../images/testimonial-bg.jpg") no-repeat scroll center center / cover;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .testimonial-area::before {
+        background: #000 none repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        opacity: 0.9;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    .testimonial {
+        padding: 75px 0 140px;
+    }
+    
+    .testimonial h2,
+    .client-opinion h3,
+    .client-opinion p {
+        color: #fff;
+    }
+    
+    .testimonial h2 {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+    
+    .testimonial h2 i {
+        font-size: 14px;
+    }
+    
+    .testimonial-border {
+        border-bottom: 1px solid #666;
+        border-top: 1px solid #666;
+    }
+    /* .single-testimonial {} */
+    
+    .client-photo {
+        margin: auto;
+        padding: 20px 0;
+        width: 200px;
+    }
+    
+    .client-opinion {
+        margin-top: 55px;
+        padding-right: 60px;
+    }
+    
+    .client-opinion h3 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 35px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+    
+    .floatleft {
+        float: left
+    }
+    
+    .floatright {
+        float: right
+    }
+    
+    .alignleft {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 15px
+    }
+    
+    .alignright {
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 15px
+    }
+    
+    .aligncenter {
+        display: block;
+        margin: 0 auto 15px
+    }
+    
+    a:focus {
+        outline: 0px solid
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto
+    }
+    
+    .fix {
+        overflow: hidden
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0 0 15px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 10px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        line-height: 1.35;
+    }
+    
+    h2 {
+        color: #333;
+        text-transform: uppercase;
+    }
+    
+    a {
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        text-decoration: none;
+        color: #323232;
+    }
+    
+    a:hover {
+        color: #f6416c;
+        text-decoration: none;
+    }
+    
+    a:active,
+    a:hover,
+    a:focus {
+        outline: 0 none;
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0
+    }
+    
+    .clear {
+        clear: both
+    }
+    
     body {
         color: #666;
         font-family: 'Roboto', sans-serif;
