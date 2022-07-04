@@ -16,7 +16,7 @@
     background-size: cover;
     background-repeat: repeat-x;
     background-position: center;
-    background: rgba(0, 0, 0, 0) url("../images/page-title.jpg") no-repeat scroll center center / cover;
+    background: url("../images/page-title.jpg");
     animation: slide 100s linear infinite;
     -webkit-animation: slide 100s linear infinite;
 }
@@ -169,6 +169,10 @@
     background-size: cover;
 }
 
+#image-column {
+    background: rgba(0, 0, 0, 0) url("../images/cbg1.jpg");
+}
+
 .chooseus-section .content-column .inner-column {
     position: relative;
     max-width: 700px;
@@ -266,8 +270,6 @@
     text-align: center;
 }
 
-.team-block-one .inner-box .image-box .social-links li a:hover {}
-
 .team-block-one .inner-box .lower-content {
     position: relative;
     padding-top: 27px;
@@ -288,10 +290,74 @@
     color: #222;
 }
 
-.team-block-one .inner-box .lower-content h3 a:hover {}
-
 .team-block-one .inner-box .lower-content .designation {
     position: relative;
     display: block;
     margin: 0px;
+}
+
+
+/** instagram-style-two **/
+
+.instagram-style-two {
+    position: relative;
+}
+
+.instagram-style-two .image-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #000;
+}
+
+.instagram-style-two .image-box img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.instagram-style-two .image-box:hover img {
+    opacity: 0.4;
+}
+
+.instagram-style-two .image-box .info-list {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 16px 18px;
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0;
+    min-width: 170px;
+    transition: all 500ms ease;
+}
+
+.instagram-style-two .image-box:hover .info-list {
+    opacity: 1;
+}
+
+.instagram-style-two .image-box .info-list li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.instagram-style-two .image-box .info-list li:last-child {
+    margin-right: 0px;
+}
+
+.instagram-style-two .image-box .info-list li a {
+    display: inline-block;
+    font-size: 14px;
+    color: #222;
+    font-weight: 500;
+}
+
+.instagram-style-two .image-box .info-list li a i {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    font-size: 20px;
 }
