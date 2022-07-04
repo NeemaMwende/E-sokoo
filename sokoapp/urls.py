@@ -7,7 +7,10 @@ from django.conf.urls.static import static
 urlpatterns=[
   
     url('', views.home, name='home'),
-    # url('search/', views.search, name='search'),
+    url('women/', views.women, name='women'),
+    url('men/', views.men, name='men'),
+    url('shop/', views.shop, name='shop'),
+    
    
 ]
 
