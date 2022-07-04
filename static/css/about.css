@@ -150,7 +150,7 @@
 
 .chooseus-section {
     position: relative;
-    background: #edf0f5;
+    background: rgba(0, 0, 0, 0) url("../images/cbg.jpg");
 }
 
 .chooseus-section .content-column {
@@ -167,10 +167,6 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#image-column {
-    background: rgba(0, 0, 0, 0) url("../images/cbg1.jpg");
 }
 
 .chooseus-section .content-column .inner-column {
