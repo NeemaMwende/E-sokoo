@@ -12,7 +12,7 @@
             <h1 class="title1"> <span id="fasho">new Fashion</span> <br>Collection</h1> 
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.<p>
                 <br>
-                <a href="#" class="btn2 mb-2">Explore Now</a>
+                <a href="{% url 'shop'  %}" class="btn2 mb-2">Explore Now</a>
         </div>      
     </div>
 
@@ -23,7 +23,7 @@
             <h1 class="title1"> <span id="fasho">men's Fashion</span> <br> Collection</h1>
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.</p>
             <br>
-            <a href="#"class="btn2 mb-3">Explore Now</a>
+            <a href="{% url 'women'  %}"class="btn2 mb-3">Explore Now</a>
         </div>
     </div>
     
@@ -34,7 +34,7 @@
             <h1 class="title1"> <span id="fasho">women's Fashion</span><br> Collection</h1>
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Women's looks.</p>
             <br>
-            <a href="#" class="btn2 mb-3">Explore Now</a>
+            <a href="{% url 'women'  %}" class="btn2 mb-3">Explore Now</a>
         </div>   
     </div>
 </div>    
@@ -118,7 +118,7 @@
                 <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
                     <div class="single-collection">
                         <div class="collection-photo ">
-                            <a href="#"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
+                            <a href="{% url 'women'  %}"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
                         </div>
                         <div class="collection-brief">
                             <div class="text-right">
@@ -130,7 +130,26 @@
                                 <li>high qualiety</li>
                                 <li><a style="text-decoration:none; color:black;" href="">Add to cart</a></li>
                             </ul>
-                            <a href="#" class="shop-now active-shop-now">shop now</a>
+                            <a href="{% url 'women'  %}" class="shop-now active-shop-now">shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
+                    <div class="single-collection">
+                        <div class="collection-photo">
+                            <a href="{% url 'women'  %}"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="collection-brief">
+                            <div class="text-right">
+                                <span class="new">new</span>
+                            </div>
+                            <h2>new <br /> <span>fashion</span></h2>
+                            <ul>
+                                <li>100% cotton</li>
+                                <li>high quality</li>
+                                <li><a style="text-decoration:none; color:black;"  href="">Add to cart</a></li>
+                            </ul>
+                            <a href="{% url 'shop'  %}" class="shop-now active-shop-now">shop now</a>
                         </div>
                     </div>
                 </div>
@@ -149,32 +168,13 @@
                                 <li>high quality</li>
                                 <li><a style="text-decoration:none; color:black;"  href="">Add to cart</a></li>
                             </ul>
-                            <a href="#" class="shop-now active-shop-now">shop now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-sm-6 p-0 mt-3">
-                    <div class="single-collection">
-                        <div class="collection-photo">
-                            <a href="#"><img src="{% static 'images/nc.jpg' %}" alt="" /></a>
-                        </div>
-                        <div class="collection-brief">
-                            <div class="text-right">
-                                <span class="new">new</span>
-                            </div>
-                            <h2>new <br /> <span>fashion</span></h2>
-                            <ul>
-                                <li>100% cotton</li>
-                                <li>high quality</li>
-                                <li><a style="text-decoration:none; color:black;"  href="">Add to cart</a></li>
-                            </ul>
-                            <a href="#" class="shop-now active-shop-now">shop now</a>
+                            <a href="{% url 'shop'  %}" class="shop-now active-shop-now">shop now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
-              <div class="more-btn centred"><a href="" class="btn-one">Products</a></div>
+              <div class="more-btn centred"><a href="{% url 'shop'  %}" class="btn-one">Products</a></div>
         </div>
         <!-- NEW-COLLECTION END -->
 <br><br>
@@ -202,7 +202,7 @@
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Cold Crewneck Sweater</a>
+                                        <a style="text-decoration:none;"  href="{% url 'women'  %}">Cold Crewneck Sweater</a>
                                         <span class="price">ksh. 1999.00</span>
                                     </div>
                                 </div>
@@ -343,7 +343,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="more-btn centred"><a href="" class="btn-one">Products</a></div>
+                <div class="more-btn centred"><a href="{% url 'shop'  %}" class="btn-one">Products</a></div>
             </div>
         </div>
     </section>
@@ -360,7 +360,7 @@
                                     <h2>sale !</h2>
                                     <h3>up to <span>30%</span> off</h3>
                                     <h4>mens best products</h4>
-                                    <a style="text-decoration:none;" class="shop-now active-shop-now" href="#">shop now</a>
+                                    <a style="text-decoration:none;" class="shop-now active-shop-now" href="{% url 'women'  %}">shop now</a>
                                 </div>
                             </div>
                         </div>
@@ -377,7 +377,7 @@
                                             <li style="text-decoration:none;">best manufacturing</li>
                                             <li style="text-decoration:none;">high quality materials</li>
                                         </ul>
-                                        <a style="text-decoration:none;" class="shop-now" href="#">pre order</a>
+                                        <a style="text-decoration:none;" class="shop-now" href="{% url 'women'  %}">pre order</a>
                                     </div>
                                 </div>
                             </div>
@@ -404,7 +404,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="all-product-view-link">
-                                        <a style="text-decoration:none;" href="#" class="shop-now">View All</a>
+                                        <a style="text-decoration:none;" href="{% url 'shop'  %}" class="shop-now">View All</a>
                                     </div>
                                 </div>
                             </div>
