@@ -1,2 +1,7 @@
 venv.
 virtual
+venv
+*pyc
+__pycache__
+pyc*
+pycache
