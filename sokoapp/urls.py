@@ -11,6 +11,7 @@ urlpatterns=[
     path('women/', views.women, name='women'),
     path('men/', views.men, name='men'),
     path('shop/', views.shop, name='shop'),
+    path('signup/', views.signup, name='signup'),
     
    
 ]
