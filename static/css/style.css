@@ -924,13 +924,9 @@
         text-decoration: none;
     }
     
-    .header-area {}
-    
     .product-area {
         Margin-bottom: 75px;
     }
-    
-    .best-sell-area {}
     
     .service-area {
         padding-top: 30px;
@@ -1021,12 +1017,6 @@
         color: #f6416c;
     }
     
-    .logo {}
-    
-    .main-menu {}
-    
-    .main-menu>nav>ul {}
-    
     .main-menu>nav>ul>li {
         display: inline-block;
         padding: 0 15px;
@@ -1091,7 +1081,6 @@
     
     .main-menu ul li .submenu li a::before {
         content: "\e905";
-        font-family: shopick;
         position: absolute;
         left: 0;
         opacity: 0;
@@ -1157,7 +1146,6 @@
     .mega-menu span a::before {
         color: #f6416c;
         content: "\e905";
-        font-family: shopick;
         opacity: 0;
         position: absolute;
         transition: all 0.3s ease 0s;
@@ -1178,8 +1166,6 @@
     .total-cart {
         float: right;
     }
-    
-    .total-cart ul {}
     
     .total-cart ul li {
         position: relative;
@@ -1535,8 +1521,6 @@
 	6. Product-Area
 ----------------------------------------*/
     
-    .product-area {}
-    
     .product-area .section-title {
         margin-bottom: 20px;
     }
@@ -1578,8 +1562,6 @@
         margin-top: 20px;
         text-align: center;
     }
-    
-    .pro-rating {}
     
     .pro-rating a i {
         font-size: 13px;
@@ -1629,8 +1611,6 @@
         width: 100%;
         z-index: -1;
     }
-    
-    .product-photo>a {}
     
     .single-product:hover .product-photo>a::before {
         opacity: 0.5;
@@ -2228,8 +2208,6 @@
         width: 100%;
     }
     
-    .coupon-info p.form-row-last {}
-    
     .coupon-info p.form-row input[type="submit"]:hover,
     p.checkout-coupon input[type="submit"]:hover {
         background: #f6416c none repeat scroll 0 0;
@@ -2251,8 +2229,6 @@
     p.lost-password a {
         color: #f6416c;
     }
-    
-    p.checkout-coupon {}
     
     p.checkout-coupon input[type="text"] {
         height: 36px;
@@ -2280,8 +2256,6 @@
     .checkout-area {
         padding-bottom: 30px;
     }
-    
-    .checkbox-form {}
     
     .checkbox-form h3 {
         border-bottom: 1px solid #e5e5e5;
@@ -2412,7 +2386,6 @@
     .payment-accordion h3.open a:after {
         content: "ï•";
         display: inline-block;
-        font-family: fontawesome;
         font-size: 20px;
         left: 0;
         position: absolute;
@@ -2468,543 +2441,3 @@
         margin: 0;
         padding: 10px;
     }
-    /* /* ------------------------------------
-23. Blog
--------------------------------------- 
-    
-    .blog-quote {
-        background: #eee none repeat scroll 0 0;
-        margin: 30px;
-        padding: 30px 40px;
-        position: relative;
-    }
-    
-    .blog-quote::before {
-        border-left: 2px solid #fff;
-        border-top: 2px solid #fff;
-        content: "";
-        height: 20px;
-        left: 15px;
-        position: absolute;
-        top: 15px;
-        width: 20px;
-    }
-    
-    .blog-quote::after {
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
-        bottom: 15px;
-        content: "";
-        height: 20px;
-        position: absolute;
-        right: 15px;
-        width: 20px;
-    }
-    
-    .social-sharing {
-        border: 1px solid #e8e8e9;
-        float: left;
-        margin: 30px 0;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .social-sharing h3 {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        color: #909295;
-        float: left;
-        font-size: 16px;
-        line-height: 30px;
-        margin: 0 20px 0 0;
-        text-transform: none;
-        width: auto;
-    }
-    
-    .sharing-icon {
-        float: right;
-    }
-    
-    .social-sharing .sharing-icon a {
-        display: inline-block;
-    }
-    
-    .social-sharing .sharing-icon a i {
-        border: 1px solid #e8e8e9;
-        color: #909295;
-        display: inline-block;
-        font-size: 18px;
-        height: 35px;
-        line-height: 35px;
-        text-align: center;
-        transition: all 0.3s ease 0s;
-        width: 35px;
-    }
-    
-    .social-sharing .sharing-icon a i.sp-facebook:hover {
-        background: #3b579d none repeat scroll 0 0;
-        border: 1px solid #3b579d;
-    }
-    
-    .social-sharing .sharing-icon a i.sp-twitter:hover {
-        background: #3acaff none repeat scroll 0 0;
-        border: 1px solid #3acaff;
-    }
-    
-    .social-sharing .sharing-icon a i.sp-linkedin:hover {
-        background: #0097bd none repeat scroll 0 0;
-        border: 1px solid #0097bd;
-    }
-    
-    .social-sharing .sharing-icon a i.sp-google:hover {
-        background: #d11717 none repeat scroll 0 0;
-        border: 1px solid #d11717;
-    }
-    
-    .social-sharing .sharing-icon a i:hover {
-        color: #fff;
-    }
-    
-    .author-info {
-        background: #f5f5f5 none repeat scroll 0 0;
-        float: left;
-        margin: 0 0 22px;
-        padding: 15px;
-        width: 100%;
-    }
-    
-    .single-post-comments {
-        margin-bottom: 30px;
-        max-width: 100%;
-    }
-    
-    .comments-heading h3,
-    h3.comment-reply-title {
-        border-bottom: 1px solid #e8e8e9;
-        font-size: 18px;
-        margin: 0 0 20px;
-        padding: 0 0 5px;
-        text-transform: uppercase;
-    }
-    
-    .comments-list ul li {
-        margin-bottom: 25px;
-    }
-    
-    .comments-list-img {
-        float: left;
-        margin-right: 15px;
-    }
-    
-    .comments-list-img img {
-        border: 1px solid #ddd;
-        width: 50px;
-    }
-    
-    .comments-content-wrap {
-        border: 1px solid #ddd;
-        color: #42414f;
-        font-size: 12px;
-        line-height: 1;
-        margin: 0 0 15px 63px;
-        padding: 10px;
-        position: relative;
-    }
-    
-    .comments-content-wrap::before {
-        background: #fff none repeat scroll 0 0;
-        border-bottom: 1px solid #ececec;
-        border-left: 1px solid #ececec;
-        content: "";
-        display: block;
-        height: 10px;
-        left: -5px;
-        position: absolute;
-        top: 10px;
-        transform: rotate(45deg);
-        width: 10px;
-    }
-    
-    .comments-content-wrap span b {
-        margin-right: 5px;
-    }
-    
-    .comments-content-wrap span a:hover {}
-    
-    span.post-time {
-        margin-right: 5px;
-    }
-    
-    .comments-content-wrap p {
-        color: #444;
-        line-height: 18px;
-        margin-bottom: 5px;
-        margin-top: 15px;
-    }
-    
-    li.threaded-comments {
-        margin-left: 50px;
-    }
-    
-    .comment-respond {
-        margin-top: 60px;
-    }
-    
-    span.email-notes {
-        color: #42414f;
-        display: block;
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-    
-    .comment-respond p {
-        margin-bottom: 5px;
-    }
-    
-    .comment-respond input[type="text"],
-    .comment-respond input[type="email"] {
-        background: #fff none repeat scroll 0 0;
-        border: 1px solid #e5e5e5;
-        border-radius: 0;
-        height: 32px;
-        margin-bottom: 15px;
-        padding: 0 0 0 10px;
-        width: 100%;
-    }
-    
-    .comment-respond textarea#message {
-        background: #fff none repeat scroll 0 0;
-        border: 1px solid #e5e5e5;
-        border-radius: 0;
-        height: 130px;
-        max-width: 100%;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .comment-respond input[type="submit"] {
-        background: #252525 none repeat scroll 0 0;
-        border: medium none;
-        border-radius: 0;
-        box-shadow: none;
-        color: #fff;
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 700;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 20px;
-        padding: 0 15px;
-        text-shadow: none;
-        text-transform: uppercase;
-        transition: all 0.3s ease 0s;
-        white-space: nowrap;
-    }
-    
-    .author-avatar {
-        float: left;
-        margin-right: 10px;
-        width: 110px;
-    }
-    
-    .author-description h3 {
-        font-size: 18px;
-        margin: 0;
-        padding: 0 0 5px;
-    }
-    
-    */
-    /*----------------------------------------*/
-    /*  24. Login
-/*----------------------------------------*/
-    /*     
-    .lognin-area {
-        margin-bottom: 53px;
-    }
-    
-    .login-title {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 27px;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-    }
-    
-    .registered {
-        border: 1px solid #ccc;
-        overflow: hidden;
-        padding: 50px;
-    }
-    
-    .registered>p,
-    .forgot>a {
-        color: #999;
-    }
-    
-    .custom-form {
-        border: 1px solid #ccc;
-        color: #999;
-        display: block;
-        font-size: 14px;
-        height: 33px;
-        line-height: 16px;
-        margin-bottom: 20px;
-        padding: 0 10px 0 15px;
-        width: 100%;
-    }
-    
-    .lognin-area label {
-        display: inline-block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        max-width: 100%;
-    }
-    
-    .checkbox label {
-        color: #999;
-        font-size: 13px;
-        line-height: 20px;
-        margin-right: 20px;
-    }
-    
-    .custom-submit-2 {
-        float: left;
-        font-size: 14px;
-        padding: 0 10px;
-    }
-    
-    .custom-submit,
-    .lognin-area .custom-submit-2 {
-        background: #252525 none repeat scroll 0 0;
-        border: medium none;
-        color: #fff;
-        height: 33px;
-        line-height: 33px;
-        margin-top: 20px;
-        text-transform: uppercase;
-        transition: all 0.4s ease 0s;
-    }
-    
-    .custom-select {
-        -moz-appearance: none;
-        background: #fff url("img/bg/angle-down.png") no-repeat scroll 97% center;
-        font-weight: normal;
-        text-transform: capitalize;
-    }
-    
-    .custom-select option {
-        padding: 4px 15px;
-    }
-    
-    .custom-select option {
-        padding: 4px 15px;
-    }
-    
-    .custom-form::-webkit-input-placeholder {
-        color: #333;
-    }
-    
-    .custom-form:-moz-placeholder {
-        color: #333;
-    }
-    /* Firefox 18- *
-    
-    .custom-form::-moz-placeholder {
-        color: #333;
-    }
-    /* Firefox 19+ *
-    
-    .custom-form:-ms-input-placeholder {
-        color: #333;
-    }
-    /* 6d6d6d *
-    
-    .custom-submit:hover,
-    .custom-submit-2:hover,
-    .active-submit {
-        background: #f6416c none repeat scroll 0 0;
-        color: #fff;
-    }
-    
-    .contact-form-wrap h3 {
-        margin-bottom: 30px;
-    }
-    
-    .contact-info h3,
-    .contact-form-wrap h3 {
-        border-bottom: 2px solid #e8e8e9 !important;
-        font-size: 16px;
-        margin-bottom: 20px;
-        padding-bottom: 8px;
-        text-transform: uppercase;
-        margin-top: 50px;
-    }
-    
-    .contact-form-wrap input[type="text"],
-    .contact-form-wrap input[type="email"] {
-        border: 1px solid #ccc;
-        border-radius: 0;
-        height: 50px;
-        margin-bottom: 16px;
-        padding-left: 20px;
-        width: 100%;
-    }
-    
-    .contact-form-wrap textarea#message {
-        border: 1px solid #ccc;
-        border-radius: 0;
-        height: 180px;
-        padding: 20px;
-        width: 100%;
-    }
-    
-    .contact-form-wrap button {
-        background: #252525 none repeat scroll 0 0;
-        border: medium none;
-        border-radius: 0;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        height: 40px;
-        margin-top: 16px;
-        padding: 0 15px;
-        text-transform: uppercase;
-        transition: all 0.3s ease 0s;
-    }
-    
-    .contact-form-wrap button:hover {
-        background: #eb3b60 none repeat scroll 0 0;
-    }
-    
-    .form-message {
-        margin-top: 15px;
-        margin-bottom: 0;
-    }
-    
-    .form-message.success {
-        color: green;
-    }
-    
-    .form-message.error {
-        color: red;
-    }
-    
-    .contact-info ul li {
-        border-bottom: 1px solid #e8e8e9;
-        float: left;
-        font-size: 12px;
-        line-height: 40px;
-        list-style: outside none none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    
-    .panel-title span::before {
-        color: #dedede;
-        content: "|";
-        padding: 0 10px;
-    }
-    
-    .custom-submit-2.save {
-        background: #252525 none repeat scroll 0 0;
-        color: #fff;
-        height: 40px;
-        margin: 10px 0;
-        padding: 0 25px;
-    }
-    
-    h1.thank-you {
-        border-bottom: 1px solid;
-        color: green;
-        font-size: 20px;
-        font-weight: 700;
-        margin-top: 50px;
-        padding-bottom: 10px;
-        text-transform: capitalize;
-    }
-    /*----------------------------------------*/
-    /*  25. 404
-/*----------------------------------------
-    
-    .area-404 {
-        text-align: center;
-    }
-    
-    .error-title {
-        padding: 60px 0 30px;
-    }
-    
-    .error-title h1 {
-        font-size: 110px;
-        font-weight: 900;
-        line-height: 120px;
-    }
-    
-    .eror-brief h2 {
-        color: #333;
-        font-size: 28px;
-        letter-spacing: 1px;
-        line-height: 34px;
-        margin-bottom: 10px;
-    }
-    
-    .eror-brief h3 {
-        color: #555454;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-    }
-    
-    .eror-form {
-        margin-top: 65px;
-    }
-    
-    .eror-form span {
-        display: inline;
-        line-height: 30px;
-        margin-right: 5px;
-    }
-    
-    .eror-form input {
-        border: 1px solid #ccc;
-        border-radius: 0;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.075) inset;
-        display: inline;
-        height: 35px;
-        margin-bottom: 20px;
-        width: 30%;
-    }
-    
-    .eror-form button {
-        background: #333 none repeat scroll 0 0;
-        border: medium none;
-        border-radius: 0;
-        color: #fff;
-        display: inline;
-        font-size: 16px;
-        height: 35px;
-        line-height: 21px;
-        margin-left: 10px;
-        padding: 0 30px;
-        transition: all 0.3s ease 0s;
-    }
-    
-    .back-home a {
-        background: #333 none repeat scroll 0 0;
-        color: #fff;
-        display: inline-block;
-        font-size: 16px;
-        height: 35px;
-        line-height: 33px;
-        margin-top: 10px;
-        padding: 0 25px;
-        text-transform: capitalize;
-    }
-    
-    .eror-form button:hover,
-    .back-home a:hover {
-        background: #f6416c none repeat scroll 0 0;
-        color: #fff;
-    }
-    
-    */
