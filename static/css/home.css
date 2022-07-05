@@ -603,11 +603,11 @@
  /*---Banner-Area ---*/
  
  .single-promo-banner.promo-banner-1 {
-     background: rgba(0, 0, 0, 0) url("../images/P1.jpg") no-repeat scroll right center / cover;
+     background: rgba(0, 0, 0, 0) url("../images/fm.webp") no-repeat scroll right center / cover;
  }
  
  .single-promo-banner.promo-banner-2 {
-     background: rgba(0, 0, 0, 0) url("../images/P2.jpg") no-repeat scroll right center / cover;
+     background: rgba(0, 0, 0, 0) url("../images/fw.webp") no-repeat scroll right center / cover;
  }
  
  .single-promo-banner.promo-banner-1,
@@ -623,13 +623,13 @@
  .promo-banner-1 .promo-banner-brief h2,
  .promo-banner-1 .promo-banner-brief h3,
  .promo-banner-1 .promo-banner-brief h4 {
-     color: #fff;
+     color: rgb(5, 5, 5);
      text-transform: uppercase;
  }
  
  .promo-banner-1 .promo-banner-brief h2 {
      font-size: 71px;
-     font-weight: 400;
+     font-weight: 500;
      line-height: 56px;
      margin-bottom: 20px;
  }
@@ -666,7 +666,7 @@
  
  .upcomming-brief h2,
  .upcomming-brief h3 {
-     color: #333333;
+     color: #eeebeb;
      line-height: 36px;
  }
  
@@ -688,7 +688,7 @@
  }
  
  .upcomming-brief li {
-     color: #333;
+     color: rgb(255, 255, 255);
      font-size: 16px;
      font-weight: 400;
      line-height: 30px;
