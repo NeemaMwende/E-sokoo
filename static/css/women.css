@@ -1309,67 +1309,6 @@ label {
 	7. Promotional-Banner-Area
 ----------------------------------------*/
 
-.single-promo-banner.promo-banner-1 {
-    background: rgba(0, 0, 0, 0) url("img/banner/promo-banner/1.jpg") no-repeat scroll right center / cover;
-}
-
-.single-promo-banner.promo-banner-2 {
-    background: rgba(0, 0, 0, 0) url("img/banner/promo-banner/2.jpg") no-repeat scroll right center / cover;
-}
-
-.single-promo-banner.promo-banner-1,
-.single-promo-banner.promo-banner-2 {
-    min-height: 600px;
-}
-
-.promo-banner-1 .promo-banner-brief {
-    padding-left: 32%;
-    padding-top: 10%;
-}
-
-.count-down .timer {
-    float: left;
-    padding: 75px 0 0 45px;
-}
-
-.promo-banner-1 .promo-banner-brief h2,
-.promo-banner-1 .promo-banner-brief h3,
-.promo-banner-1 .promo-banner-brief h4 {
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.promo-banner-1 .promo-banner-brief h2 {
-    font-size: 71px;
-    font-weight: 400;
-    line-height: 56px;
-    margin-bottom: 20px;
-}
-
-.promo-banner-1 .promo-banner-brief h3,
-.promo-banner-1 .promo-banner-brief h4 {
-    font-size: 32px;
-}
-
-.promo-banner-1 .promo-banner-brief h3 {
-    font-weight: 300;
-    line-height: 36px;
-    margin: 0;
-}
-
-.promo-banner-1 .promo-banner-brief span {
-    font-size: 50px;
-}
-
-.promo-banner-1 .promo-banner-brief h4 {
-    font-weight: 700;
-    line-height: 24px;
-    margin: 15px 0 0;
-}
-
-.promo-banner-1 .shop-now {
-    margin-top: 40px;
-}
 
 .cdown {
     background: #323232 none repeat scroll 0 0;
@@ -1390,7 +1329,7 @@ label {
     margin-bottom: 0;
 }
 
-.cdown span {}
+
 
 .cdown p {
     margin: 8px 0 0;
