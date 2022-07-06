@@ -1,7 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import SignupForm
+from django.http import HttpResponseRedirect
+from .forms import *
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -22,11 +21,15 @@ def shop(request):
     return render(request,"shop.html",{"clothes": clothes})
 
 def addToCart(request,name):
+    item = get_object_or_404(Item,name=name)
+    orderItem = OrderItem.objects.create(item=item)
+    
 
     return render(request,"cart.html")
 
 def about(request):
     return render(request,"about.html")
+
 def signup(request):
     if request.method=="POST":
      form=UserCreationForm(request.POST)

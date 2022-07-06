@@ -9,12 +9,13 @@ class Item(models.Model):
     photo = models.ImageField(upload_to='product/')
     description = HTMLField()
     price = models.IntegerField()
+    quantity = models.IntegerField(default=1)
    
     def __str__(self):
         return self.name
 
 class OrderItem(models.Model):
-    item = models.ForeignKey(Cloth, on_delete=models.CASCADE)
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
