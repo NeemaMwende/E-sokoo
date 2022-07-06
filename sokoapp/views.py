@@ -6,16 +6,20 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .models import *
 # Create your views here.
 def home(request):
-    return render(request,"home.html")
-  
+    clothes = Cloth.objects.all
+    return render(request, 'home.html', {"clothes": clothes})
+
 def women(request):
     return render(request,"women.html")
 def men(request):
     return render(request,"men.html")
+    
 def shop(request):
-    return render(request,"shop.html")
+    clothes = Cloth.objects.all
+    return render(request,"shop.html",{"clothes": clothes})
 
 def about(request):
     return render(request,"about.html")

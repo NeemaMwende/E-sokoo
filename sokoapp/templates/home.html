@@ -193,6 +193,7 @@
                     <span><img src="{% static 'images/sb.png' %}" alt="" /></span> 
                 </div>
                 <br><br>
+                 {% for cloth in clothes %}
                 <div class="sortable-masonry">
                     <div class="items-container row clearfix">
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals top_rate">
@@ -207,12 +208,13 @@
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="{% url 'women'  %}">Cold Crewneck Sweater</a>
-                                        <span class="price">ksh. 1999.00</span>
+                                        <a style="text-decoration:none;"  href="{% url 'women'  %}">{{ cloth.name }}Cold Crewneck Sweater</a>
+                                        <span class="price">${{ cloth.price }}. 1999.00</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller">
                             <div class="shop-block-one">
                                 <div class="inner-box">
@@ -348,6 +350,7 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
                 <div class="text-center more-btn centred"><a href="{% url 'shop'  %}" class="btn3">Products</a></div>
             </div>
         </div>
