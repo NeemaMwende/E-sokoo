@@ -206,19 +206,20 @@
                                               <i class="fa-solid fa-heart fa-2x"></i>
                                             </li>
                                             <li>
-                                                <a style="text-decoration:none;" class="add" data-action="add" data-product="{{cloth.id}}" href="">Add to cart</a>
+                                            
                                             </li>
-                                          
                                         </ul>
                                     </figure>
-                                    <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="{% url 'women'  %}">{{ cloth.name }}</a>
+                                    <div class="lower-content"> 
+                                        <a style="text-decoration:none;" class="btn btn-outline-secondary addtocart" data-action="add" data-product="{{cloth.id}}" href="">Add to cart</a>
+                                           <br>
+                                        <a style="text-decoration:none;"  href="{% url 'women'  %}"> {{ cloth.name }}</a>
                                         <span class="price">${{ cloth.price }}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+{% comment %} 
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller">
                             <div class="shop-block-one">
                                 <div class="inner-box">
@@ -353,7 +354,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
                 {% endfor %}
                 <div class="text-center more-btn centred"><a href="{% url 'shop'  %}" class="btn3">Products</a></div>
             </div>
@@ -540,6 +541,38 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
+
+
+
+{% comment %} Cart js {% endcomment %}
+
+let btns = document.getElementsByClassName('addtocart')
+
+for (let i=0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {
+    let clothId = this.dataset.cloth
+
+     console.log(clothId)
+    
+    })
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 {% endblock %}
