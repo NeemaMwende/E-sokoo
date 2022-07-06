@@ -9,7 +9,7 @@ from django.contrib import messages
 from .models import *
 # Create your views here.
 def home(request):
-    clothes = Cloth.objects.all
+    clothes = Item.objects.all
     return render(request, 'home.html', {"clothes": clothes})
 
 def women(request):
@@ -18,8 +18,12 @@ def men(request):
     return render(request,"men.html")
     
 def shop(request):
-    clothes = Cloth.objects.all
+    clothes = Item.objects.all
     return render(request,"shop.html",{"clothes": clothes})
+
+def addToCart(request,name):
+
+    return render(request,"cart.html")
 
 def about(request):
     return render(request,"about.html")

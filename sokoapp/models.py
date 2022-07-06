@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 # Create your models here.
-class Cloth(models.Model):
+class Item(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='cloth/')
+    photo = models.ImageField(upload_to='product/')
     description = HTMLField()
     price = models.IntegerField()
    
