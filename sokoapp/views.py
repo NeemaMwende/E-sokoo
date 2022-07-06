@@ -23,7 +23,15 @@ def shop(request):
 def addToCart(request,name):
     item = get_object_or_404(Item,name=name)
     orderItem = OrderItem.objects.create(item=item)
-    
+    orderQs = Order.objects.filter(user=request.user, ordered=False)
+
+    if orderQs.exists():
+        order=orderQs[0]
+        #checking if order is already in cart
+        if order.items.filter(item__name=item.slug).exists():
+            orderItem.quantity += 1
+            orderItem.save()
+
 
     return render(request,"cart.html")
 
