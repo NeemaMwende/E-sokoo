@@ -9,8 +9,8 @@ def home(request):
         form = NewsLetterForm(request.POST)
         if form.is_valid():
             print('valid')
-        else:
-            form = NewsLetterForm()
+    else:
+        form = NewsLetterForm()
 
     return render(request,"home.html", {'letterForm': form})
 
