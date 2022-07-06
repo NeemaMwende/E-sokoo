@@ -25,9 +25,9 @@ def shop(request):
    clothes = Product.objects.all
    return render(request,"shop.html",{'clothes':clothes})
 
-# def addToCart(request,slug):
+def addToCart(request):
  
-#     return render(request,"cart.html")
+    return render(request,"cart.html")
 
 def about(request):
     return render(request,"about.html")
