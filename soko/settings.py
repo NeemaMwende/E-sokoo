@@ -69,9 +69,9 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'soko',
-    #     'USER': 'moringa',
-    # 'PASSWORD':'Access',
+         'NAME': 'esoko',
+        'USER': 'moringa',
+         'PASSWORD':'esoko',
     }
 }
 

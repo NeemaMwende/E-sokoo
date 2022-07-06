@@ -4,69 +4,22 @@
 {% block content %}
 
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Esoko : Mens Outfit</title>
-        <meta name="description" content="Shopick – Fashion Store HTML Template is a clean and elegant design – suitable for selling clothing, fashion, high fashion, men fashion, women fashion, accessories, digital, kids, watches, jewelries, shoes, kids, furniture, sports, tools….. It has a fully responsive width adjusts automatically to any screen size or resolution.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-        <!-- Place favicon.ico in the root directory -->
-		
-		<!-- Google Font -->
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500.00,700,300' rel='stylesheet' type='text/css'>
-		
-		<!-- all css here -->
-		<!-- bootstrap v5.1.0 css -->
-        <link rel="stylesheet" href="{% static 'men/css/bootstrap.min.css'%}">
-		<!-- animate css -->
-        <link rel="stylesheet" href="{% static 'men/css/animate.min.css'%}">
-		<!-- jquery-ui.min css -->
-        <link rel="stylesheet" href="{% static 'men/css/jquery-ui.min.css'%}">
-		<!-- meanmenu css -->
-        <link rel="stylesheet" href="{% static 'men/css/meanmenu.min.css'%}">
-		<!-- nivo-slider css -->
-        <link rel="stylesheet" href="{% static 'men/css/nivo-slider.css'%}">
-		<!-- owl.carousel css -->
-        <link rel="stylesheet" href="{% static 'men/css/owl.carousel.css'%}">
-		<!-- flaticon css -->
-        <link rel="stylesheet" href="{% static 'men/css/shopick-icon.css'%}">
-		<!-- pe-icon-7-stroke css -->
-        <link rel="stylesheet" href="{% static 'men/css/pe-icon-7-stroke.css'%}">
-		<!-- lightbox css -->
-        <link rel="stylesheet" href="{% static 'men/css/lightbox.min.css'%}">
-		<!-- style css -->
-		<link rel="stylesheet" href="{% static 'men/css/style.css'%}">
-		<!-- responsive css -->
-        <link rel="stylesheet" href="{% static 'men/css/responsive.css'%}">
-		<!-- modernizr css -->
-        <script src="{% static 'men/js/vendor/modernizr-3.11.2.min.js'%}"></script>
-    </head>
+ 
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		
-	
 		<!-- PAGE-CONTENT START -->
 		<section class="page-content">
-			<!-- PAGE-BANNER START -->
-			<div class="page-banner-area margin-bottom-80">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="page-banner-menu">
-								<h2 class="page-banner-title">Men's Fashion </h2>
-								<ul>
-									<li><a href="index.html">home</a></li>
-									<li>Men's Fashion</li>
-								</ul>
-							</div>
-						</div>
+			<section class="page-title centred">
+				<div class="pattern-layer"></div>
+				<div class="auto-container">
+					<div class="content-box text-center">
+						<h1 class="page-banner-title">Men's Fashion </h1>
+						<ul class="bread-crumb clearfix">
+							<li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
+							<li>Men's Fashion</li>
+						</ul>
 					</div>
 				</div>
-			</div>
+			</section>
 			<!-- PAGE-BANNER END -->
 			<!-- SHOP-AREA START -->
 			<div class="shop-area margin-bottom-80">
