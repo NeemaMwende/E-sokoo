@@ -1,3 +1,4 @@
+from multiprocessing import context
 from string import Template
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -28,15 +29,33 @@ def shop(request):
 
 class addToCart(TemplateView):
     template_name = "cart.html"
-    # Get product by id
+
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+
+        # Get product by id
+        product_id = self.kwargs['pro_id']
+
+        # get product
+        product_obj = Product.objects.get(id=product_id)
+
+        # check if cart exists
+        cart_id= self.request.session.get('cart_id', None)
+        if cart_id:
+            cart_odj= Cart.objects.get(id=cart_id)    
+            this_product_in_cart=cart_odj.CartProduct_set.filter('product')
+        else:
+            cart_obj= Cart.objects.create(total=0)
+            self.request.session["cart_id"]=cart_obj.id
+       
+         
+
+        # check if product is already exists
+        
 
 
-    # get product
-
-    # check if cart exists
-
-    # check if product is already exists
- 
+        return context
+   
   
 
 def about(request):
