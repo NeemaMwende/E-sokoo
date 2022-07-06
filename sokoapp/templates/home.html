@@ -211,7 +211,7 @@
                                         </ul>
                                     </figure>
                                     <div class="lower-content"> 
-                                        <a style="text-decoration:none;" class="btn btn-outline-secondary" data-product="" href="{% url 'addToCart'%}" >Add to cart</a>
+                                        <a style="text-decoration:none;" class="btn btn-outline-secondary" data-product="" href="{% url 'addToCart' cloth.id %}" >Add to cart</a>
                                            <br> 
                                         <a style="text-decoration:none;"  href="{% url 'women'  %}"> {{ cloth.name }}</a>
                                         <span class="price">${{ cloth.price }}</span>
