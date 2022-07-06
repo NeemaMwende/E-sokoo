@@ -26,9 +26,12 @@ def signup(request):
          form.save()
          username= form.cleaned_data["username"]
          messages.success(request,f"Hi { username }, your account has been created successfully!")
-         return redirect("home")
+         return redirect("login")
     else:
          form=UserCreationForm()
          
    
     return render(request,"registration/signup.html",{'form':form})
+
+def profile(request):
+    return render(request,"registration/profile.html",)

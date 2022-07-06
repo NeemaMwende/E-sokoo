@@ -6,7 +6,7 @@
 {% comment %} Bunner {% endcomment %}
 <div class="slideshow-container">
     <div class="mySlides fade">
-        <img src="{% static 'images/1.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+        <img src="{% static 'images/1.jpg' %}" style="width:100%; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
         <div class="text">
             <h1 class="title1"> <span id="fasho">New Fashion</span> <br>Collection</h1> 
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.<p>
@@ -15,7 +15,7 @@
         </div>      
     </div>
     <div class="mySlides fade">
-        <img src="{% static 'images/2.jpg' %}" style="width:100%; border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+        <img src="{% static 'images/2.jpg' %}" style="width:100%; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
         <div class="text">
             <h1 class="title1"> <span id="fasho">Men's Fashion</span> <br> Collection</h1>
             <p class="slider-brief fw-light fs-6">New Modern Stylist Fashionable Men's Wear Jeans Shirt.</p>
@@ -534,5 +534,5 @@ function showSlides() {
     setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
 </script>
-
+{% include 'footer.html' %}
 {% endblock %}

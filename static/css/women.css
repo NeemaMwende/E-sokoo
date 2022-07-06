@@ -1090,7 +1090,7 @@ label {
 	6. Product-Area
 ----------------------------------------*/
 
-.product-area {}
+
 
 .product-area .section-title {
     margin-bottom: 20px;
@@ -1306,6 +1306,102 @@ label {
 
 
 /*----------------------------------------
+<<<<<<< HEAD
+	7. Promotional-Banner-Area
+----------------------------------------*/
+
+
+.cdown {
+    background: #323232 none repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    height: 105px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    padding-top: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 105px;
+}
+
+.cdown:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.cdown p {
+    margin: 8px 0 0;
+}
+
+.style-2 .cdown {
+    font-size: 20px;
+    height: 70px;
+    line-height: 12px;
+    width: 70px;
+}
+
+.upcomming-brief {
+    float: left;
+    padding: 95px 0 0 65px;
+}
+
+.upcomming-brief h2,
+.upcomming-brief h3 {
+    color: #333333;
+    line-height: 36px;
+}
+
+.upcomming-brief h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.upcomming-brief h3 {
+    font-size: 33px;
+    font-weight: 300;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+
+.upcomming-brief span {
+    font-weight: 700;
+}
+
+.upcomming-brief li {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 28px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.upcomming-brief li::before {
+    background: #f6416c none repeat scroll 0 0;
+    border-radius: 100%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+}
+
+.upcomming-brief .shop-now {
+    font-size: 16px;
+    margin-top: 55px;
+}
+
+
+/*----------------------------------------
+=======
+>>>>>>> 87a21c9a84ce53d4336300d72768d1933e3c61f0
 	8. Best-Sell-Area
 ----------------------------------------*/
 
@@ -2719,7 +2815,7 @@ label {
     margin-right: 0;
 }
 
-.widget-color ul li:hover a {}
+
 
 .widget-color ul li a.color-1 {
     background: #005B7F;
