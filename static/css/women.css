@@ -1090,7 +1090,7 @@ label {
 	6. Product-Area
 ----------------------------------------*/
 
-.product-area {}
+
 
 .product-area .section-title {
     margin-bottom: 20px;
@@ -1306,6 +1306,7 @@ label {
 
 
 /*----------------------------------------
+<<<<<<< HEAD
 	7. Promotional-Banner-Area
 ----------------------------------------*/
 
@@ -1399,6 +1400,8 @@ label {
 
 
 /*----------------------------------------
+=======
+>>>>>>> 87a21c9a84ce53d4336300d72768d1933e3c61f0
 	8. Best-Sell-Area
 ----------------------------------------*/
 
@@ -2812,7 +2815,7 @@ label {
     margin-right: 0;
 }
 
-.widget-color ul li:hover a {}
+
 
 .widget-color ul li a.color-1 {
     background: #005B7F;

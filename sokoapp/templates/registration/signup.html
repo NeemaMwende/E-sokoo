@@ -1,26 +1,22 @@
-{% extends 'registration/base.html' %}
-{% load static %}
+
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
-
 {% block content %}
-<link rel="stylesheet" href=""
 <div class="container">
-    <form action="" method="POST">
-        {% csrf_token %} 
-        <fieldset class="form-group" id="">
-            <legend class="border-bottom mb-4" style="color:white" Signup></legend>
-            {{ forms|crispy }}
-        </fieldset>
-        <div class="form-group" id="signup-button">
-            <button class="btn">Sign Up</button>
-
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-sm btn-info">Sign Up</button>
+                <div class="form-group">
+                    <small class>Already have an account? <a href="{% url 'login' %}">Sign In</a></small>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <small class="text-muted ml-3"> Already have an account? <a href="">Sign In</a></small>
-        </div>
-    </form>
-
-
+        <div class="col-md-3"></div>
+    </div>
 </div>
+
 {% endblock %}
