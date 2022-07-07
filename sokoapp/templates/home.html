@@ -554,7 +554,7 @@
 <!--NEWS LETTER FORM -->
 <div class="container-fluid">
     <legend class="text-center border-bottom">Subscribe to Our Newsletter</legend>
-    <form action="{% url 'home' %}" methood="post" class="p-3">
+    <form action="{% url 'home' %}" method="POST" class="p-3">
         {% csrf_token %}
         {% bootstrap_form letterForm layout='inline' %}
         <input type="submit" value="Subscribe" class="btn btn-outline-info">
