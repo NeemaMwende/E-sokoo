@@ -5,10 +5,22 @@
     Your Shopping Cart
 {% endblock %}
 
-
 {% block content %}
+   <section class="page-title centred">
+            <div class="pattern-layer"></div>
+            <div class="auto-container">
+                <div class="content-box text-center">
+                    <h1>E-SOKO Cart</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
+                        <li>Shop Now!!!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--title-->
     <div class="container">
-        <div class="row" style="margin-top: 6%">
+        <div class="row" style="margin-top: 2%">
         <h2>Your Shopping Cart
             <span class="badge pull-right">
                 {% with totail_items=cart|length %}
@@ -39,9 +51,9 @@
                     {% with product=item.product  %}
                         <tr>
                             <td>
-                                <a href="{{ product.get__absolute_url }}">
-                                    <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="height: 130px; width: auto">
-                                </a>
+
+                              <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="height: 130px; width: auto">
+                                
                             </td>
                             <td>{{ product.name }}</td>
                             <td>
@@ -53,7 +65,7 @@
                                 </form>
                             </td>
                             <td>
-                                <a href="{% url "cart:cart_remove" product.id %}">Remove</a>
+                                <a style="text-decoration:none;" href="{% url "cart:cart_remove" product.id %}">Remove</a>
                             </td>
                             <td>kshs. {{ item.price }}</td>
                             <td>kshs. {{ item.total_price }}</td>
@@ -68,9 +80,10 @@
                 </tbody>
             </table>
         <p class="text-right">
-            <a href="{% url "product_list" %}" class="btn btn-default">Continue Shopping</a>
-            <a href="" class="btn btn-primary">Checkout</a>
+            <a href="{% url "shop" %}" class="btn btn-default">Continue Shopping</a>
+            <a href="" class="btn2 btn-primary">Checkout</a>
         </p>
         </div>
     </div>
+    <br><br>
 {% endblock %}

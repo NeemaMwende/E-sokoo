@@ -167,7 +167,7 @@
                             <div class="text-right">
                                 <span class="new">new</span>
                             </div>
-                            <h2>new <br /> <span>fashion</span></h2>
+                            <h2>new <br/> <span>fashion</span></h2>
                             <ul>
                                 <li>100% cotton</li>
                                 <li>high quality</li>
@@ -179,7 +179,7 @@
                 </div>
             </div>
             <br>
-              <div class="more-btn centred text-center"><a href="{% url 'shop'  %}" class="btn-one">Products</a></div>
+              <div class="more-btn centred text-center"><a href="{% url 'shop'  %}" class="btn-one">Arrivals</a></div>
         </div>
         <!-- NEW-COLLECTION END -->
 <br><br>
@@ -194,7 +194,6 @@
                     <span><img src="{% static 'images/sb.png' %}" alt="" /></span> 
                 </div>
                 <br><br>
-                {% for product in products %}
                 <div class="sortable-masonry ">
                     <div class="items-container row clearfix">
                         <div class="productAll col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller new_arraivals top_rate">
@@ -207,20 +206,18 @@
                                               <i class="fa-solid fa-heart fa-2x"></i>
                                             </li>
                                             <li>
-                                              <a style="text-decoration:none;" class="" data-product="" href="" >Add to cart</a>
+                                              <a style="text-decoration:none;" class=""  href="{% url 'product_list'  %}">Add to cart</a>
                                             </li>
                                         </ul>
                                     </figure>
-                                    <div class="lower-content" id="products"> 
-                                         <a style="text-decoration:none;" class="btn btn-outline-secondary" href="">Add to cart</a>
-                                           <br> 
-                                        <a style="text-decoration:none;"class="productName"  href="{% url 'women'  %}"> {{product.name}}</a>
-                                       <h4  class="price" >$<span class="price productPrice">{{product.price}}</span></h4>
+                                    <div class="lower-content">
+                                        <a style="text-decoration:none;"class=""  href="{% url 'men'  %}"> Trench</a>
+                                      <span class="price"> ksh.2499</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-{% comment %} 
+ 
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block masonry-item small-column best_seller">
                             <div class="shop-block-one">
                                 <div class="inner-box">
@@ -230,11 +227,11 @@
                                         <span class="category green-bg">New</span>
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
                                         
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Multi-Way Ultra Crop Top</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Multi-Way Ultra Crop Top</a>
                                         <span class="price">ksh. 1499.00</span>
                                     </div>
                                 </div>
@@ -248,12 +245,12 @@
                                    
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
 
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Side-Tie Tank</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Side-Tie Tank</a>
                                         <span class="price">ksh. 1599.00</span>
                                     </div>
                                 </div>
@@ -267,12 +264,12 @@
                                       
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
                                           
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Cold Crewneck Sweater</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Cold Crewneck Sweater</a>
                                         <span class="price">ksh. 1999.99</span>
                                     </div>
                                 </div>
@@ -286,12 +283,12 @@
                                        
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
 
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Side-Tie Tank</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Side-Tie Tank</a>
                                         <span class="price">ksh. 2599.99</span>
                                     </div>
                                 </div>
@@ -305,12 +302,12 @@
                                      
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
                                            
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Must-Have Easy Tank</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Must-Have Easy Tank</a>
                                         <span class="price">ksh. 1599.00</span>
                                     </div>
                                 </div>
@@ -324,12 +321,12 @@
                                         <span class="category red-bg">Hot</span>
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
                                          
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Woven Crop Cami</a>
+                                        <a style="text-decoration:none;"  href="{% url 'shop'  %}">Woven Crop Cami</a>
                                         <span class="price">ksh. 999.00</span>
                                     </div>
                                 </div>
@@ -343,26 +340,26 @@
                                      
                                         <ul class="info-list clearfix">
                                             <li style="color:red;" class="mt-2 mr-2"><i class="fa-solid fa-heart fa-2x"></i></li>
-                                            <li><a style="text-decoration:none;" href="product-details.html">Add to cart</a></li>
+                                            <li><a style="text-decoration:none;" href="{% url 'product_list'  %}">Add to cart</a></li>
 
                                         </ul>
                                     </figure>
                                     <div class="lower-content">
-                                        <a style="text-decoration:none;"  href="product-details.html">Must-Have Easy Tank</a>
+                                        <a style="text-decoration:none;"  href="{% url 'women'  %}">Must-Have Easy Tank</a>
                                         <span class="price">ksh. 999.00</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> {% endcomment %}
+                </div>
            
-                <div class="text-center more-btn centred"><a href="{% url 'shop'  %}" class="btn3">Products</a></div>
+                <div class="text-center more-btn centred"><a href="{% url 'product_list'  %}" class="btn3">Products</a></div>
             </div>
         </div>
     </section>
 
- {% endfor %}
+ 
     <!-- shop-section end -->
  <!-- PROMOTIONAL-BANNER START -->
         <div class="promotional-banner-area clearfix p-0">
