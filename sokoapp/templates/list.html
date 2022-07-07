@@ -6,62 +6,38 @@
 {% endblock %}
 
 {% block content %}
-   <div class="container-fluid">
-      <div class="row" style="margin-top: 6%">
-
-        <div class="col-sm-8 blog-main">
-
-          <div class="blog-post">
-              <div class="row">
-                  {% for product in products %}
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="{{ product.get_absolute_url }}">
-                                <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="height: 130px; width: auto">
-                            </a>
-                            <div class="caption">
+   <div class="container">
+            <div class="row" style="margin-top: 2%;">
+                     {% for product in products %}
+                             <div class="col-md-3">
+                                <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="width:auto; height=150px border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+                             </div>
+                            <div class="caption col-md-3 text-center">
                                 <h3 class="text-center">
-                                    <a href="/product/{{product.id}}">{{ product.name }}</a>
+                                    {{ product.name }}
                                 </h3>
-                                <p class="text-center">Kshs. {{ product.price }}</p>
+                                <p class="text-center">Kshs. {{ product.price }}</p> 
+                                <p>{{ product.description|safe|linebreaksbr }}</p>
+                                <form action="{% url 'cart:cart_add' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    {{ cart_product_form }}
+                                    <input type="submit" value="add to cart" class="btn btn-primary">
+                                </form> 
                             </div>
-                        </div>
-                      </div>
-
-                    <form action="{% url 'cart:cart_add' product.id %}" method="POST">
-                        {% csrf_token %}
-                        {{ cart_product_form }}
-                        <input type="submit" value="add to cart" class="btn btn-primary">
-                    </form>
-                    <p>{{ product.description|safe|linebreaksbr }}</p>
-
-
-                  {% endfor %}
-              </div>
-
-
-          </div><!-- /.blog-post -->
-
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module">
-            <h4>Categories</h4>
-            <ol class="list-unstyled">
-              <li {% if not category %} class="active"{% endif %}>
-                <a href="{% url 'product_list' %}">All</a></li>
-            {% for c in categories %}
-
-              <li {% if category.slug == c.slug %} class="active"{% endif %}>
-                  <a href="{% url 'productCategory' c.id %}">{{ c.name }}</a>
-              </li>
-      
-            </ol>
-          </div>  
-        </div><!-- /.blog-sidebar -->
-      {% endfor %}
-    
-      </div><!-- /.row -->
-
+                          {% endfor %}
+                           <div class="col-sm-4 col-sm-offset-1 blog-sidebar text-end">
+                                <div class="sidebar-module">
+                                  <h4>Categories</h4>
+                                
+                                    <h5 {% if not category %} class="active"{% endif %}>
+                                      <a href="{% url 'product_list' %}">All </a><h5>
+                                  {% for c in categories %}
+                                   <h6 {% if category.slug == c.slug %} class="active" {% endif %}>
+                                        {{ c.name }}</h6>
+                                   {% endfor %}
+                                 </div>  
+                             </div>
+               </div>        
     </div><!-- /.container -->
+    <br><br>
 {% endblock %}

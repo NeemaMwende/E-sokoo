@@ -1,25 +1,14 @@
-from audioop import add
-from hashlib import new
-from itertools import product
-from multiprocessing import context
-import pkgutil
-from re import A
-from string import Template
-from zoneinfo import available_timezones
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseRedirect
-from .forms import *
-from cart.forms import CartAddProductForm
-from django.views.generic import TemplateView
-from django.utils import timezone
-from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-from .models import *
+from django.contrib.auth import login, authenticate
 from django.views.decorators.http import require_POST
-# Create your views here.
-
+from cart.forms import CartAddProductForm
+from django.contrib import messages
+from sokoapp.models import Product
+from .forms import *
+from .models import *
+from .cart import *
 
 
 def home(request):
@@ -46,15 +35,16 @@ def product_list(request, category_slug=None):
     return render(request, 'list.html', context)
 
 
-def product_detail(request, id):
-    product = Product.objects.get(id=id,available=True)
-    # get_object_or_404(Product, id=id, available=True)
-    cart_product_form = CartAddProductForm()
-    context = {
-        'product': product,
-        'cart_product_form': cart_product_form
-    }
-    return render(request, 'detail.html', context)
+# def product_detail(request, id):
+#     product = Product.objects.get(id=id,available=True)
+#     cart_product_form = CartAddProductForm()
+#     context = {
+#         'product': product,
+#         'cart_product_form': cart_product_form
+#     }
+#     return render(request, 'detail.html', context)
+
+
 
 
 def women(request):
