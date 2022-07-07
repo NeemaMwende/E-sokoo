@@ -13,8 +13,7 @@ from .cart import *
 
 def home(request):
     products = Product.objects.all
-    cart_product_form = CartAddProductForm()
-    return render(request, 'home.html',{'products':products,'cart_product_form': cart_product_form})
+    return render(request, 'home.html',{'products':products})
 
 def product_list(request, category_slug=None):
     category = None
@@ -34,19 +33,6 @@ def product_list(request, category_slug=None):
     }
     return render(request, 'list.html', context)
 
-
-# def product_detail(request, id):
-#     product = Product.objects.get(id=id,available=True)
-#     cart_product_form = CartAddProductForm()
-#     context = {
-#         'product': product,
-#         'cart_product_form': cart_product_form
-#     }
-#     return render(request, 'detail.html', context)
-
-
-
-
 def women(request):
     return render(request,"women.html")
 def men(request):
@@ -55,8 +41,6 @@ def men(request):
 def shop(request):
    products = Product.objects.all
    return render(request,"shop.html",{'products':products})
-
-
 
 def about(request):
     return render(request,"about.html")
@@ -77,54 +61,6 @@ def signup(request):
 
 
 
-
-
-# def product_list(request, category_slug=None):
-#     category = None
-#     categories = Category.objects.all()
-#     products = Product.objects.filter(available=True)
-#     if category_slug:
-#         category = get_object_or_404(Category, slug=category_slug)
-#         products = Product.objects.filter(category=category)
-
-#     context = {
-#         'category': category,
-#         'categories': categories,
-#         'products': products
-#     }
-#     return render(request, 'list.html', context)
-
-
-
-
-
-
-
-
-
-# @require_POST
-# def cart_add(request, product_id):
-#     cart = Cart(request)  # create a new cart object passing it the request object 
-#     product = get_object_or_404(Product, id=product_id) 
-#     form = CartAddProductForm(request.POST)
-#     if form.is_valid():
-#         cd = form.cleaned_data
-#         cart.add(product=product, quantity=cd['quantity'], update_quantity=cd['update'])
-#     return redirect('cart:cart_detail')
-
-
-# def cart_remove(request, product_id):
-#     cart = Cart(request)
-#     product = get_object_or_404(Product, id=product_id)
-#     cart.remove(product)
-#     return redirect('cart:cart_detail')
-
-
-# def cart_detail(request):
-#     cart = Cart(request)
-#     for item in cart:
-#         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
-#     return render(request, 'cart/detail.html', {'cart': cart})
 
 
 

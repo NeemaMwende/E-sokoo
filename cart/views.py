@@ -15,13 +15,13 @@ def cart_add(request, pk):
     if form.is_valid():
         cd = form.cleaned_data
         cart.add(product=product, quantity=cd['quantity'], update_quantity=cd['update'])
-    return redirect('cart:cart_detail')
+    return redirect('product_list')
 
 def cart_remove(request, pk):
     cart = Cart(request)
     product = get_object_or_404(Product, pk=pk)
     cart.remove(product)
-    return redirect('cart:cart_detail')
+    return redirect('product_list')
 
 
 def cart_detail(request):

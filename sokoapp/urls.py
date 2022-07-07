@@ -15,9 +15,6 @@ urlpatterns=[
     path('signup/', views.signup, name='signup'),
 
     path('products/', views.product_list, name='product_list'),
-    # path('productCategory/', views.product_list, name='productCategory'),
-    # path('productDetail/(\d+)', views.product_detail, name='product_detail'),
-    # path('^(?P<id>\d+)/(?P<slug>[-\w]+)/', views.product_detail, name='product_detail'),
 
    
 ]
