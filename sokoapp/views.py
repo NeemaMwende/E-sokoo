@@ -1,8 +1,15 @@
+from audioop import add
+from hashlib import new
+from itertools import product
 from multiprocessing import context
+import pkgutil
+from re import A
 from string import Template
+from zoneinfo import available_timezones
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
 from .forms import *
+from cart.forms import CartAddProductForm
 from django.views.generic import TemplateView
 from django.utils import timezone
 from django.contrib.auth import login, authenticate
@@ -10,13 +17,45 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import *
+from django.views.decorators.http import require_POST
 # Create your views here.
 
 
 
 def home(request):
-    clothes = Product.objects.all
-    return render(request, 'home.html',{'clothes':clothes})
+    products = Product.objects.all
+    cart_product_form = CartAddProductForm()
+    return render(request, 'home.html',{'products':products,'cart_product_form': cart_product_form})
+
+def product_list(request, category_slug=None):
+    category = None
+    categories = Category.objects.all()
+    products = Product.objects.filter(available=True)
+    cart_product_form = CartAddProductForm()
+    
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = Product.objects.filter(category=category)
+
+    context = {
+        'category': category,
+        'categories': categories,
+        'products': products,
+        'cart_product_form': cart_product_form
+    }
+    return render(request, 'list.html', context)
+
+
+def product_detail(request, id):
+    product = Product.objects.get(id=id,available=True)
+    # get_object_or_404(Product, id=id, available=True)
+    cart_product_form = CartAddProductForm()
+    context = {
+        'product': product,
+        'cart_product_form': cart_product_form
+    }
+    return render(request, 'detail.html', context)
+
 
 def women(request):
     return render(request,"women.html")
@@ -24,39 +63,10 @@ def men(request):
     return render(request,"men.html")
     
 def shop(request):
-   clothes = Product.objects.all
-   return render(request,"shop.html",{'clothes':clothes})
-
-class addToCart(TemplateView):
-    template_name = "cart.html"
-
-    def get_context_data(self, **kwargs):
-        context=super().get_context_data(**kwargs)
-
-        # Get product by id
-        product_id = self.kwargs['pro_id']
-
-        # get product
-        product_obj = Product.objects.get(id=product_id)
-
-        # check if cart exists
-        cart_id= self.request.session.get('cart_id', None)
-        if cart_id:
-            cart_odj= Cart.objects.get(id=cart_id)    
-            this_product_in_cart=cart_odj.CartProduct_set.filter('product')
-        else:
-            cart_obj= Cart.objects.create(total=0)
-            self.request.session["cart_id"]=cart_obj.id
-       
-         
-
-        # check if product is already exists
-        
+   products = Product.objects.all
+   return render(request,"shop.html",{'products':products})
 
 
-        return context
-   
-  
 
 def about(request):
     return render(request,"about.html")
@@ -74,3 +84,178 @@ def signup(request):
          
    
     return render(request,"registration/signup.html",{'form':form})
+
+
+
+
+
+# def product_list(request, category_slug=None):
+#     category = None
+#     categories = Category.objects.all()
+#     products = Product.objects.filter(available=True)
+#     if category_slug:
+#         category = get_object_or_404(Category, slug=category_slug)
+#         products = Product.objects.filter(category=category)
+
+#     context = {
+#         'category': category,
+#         'categories': categories,
+#         'products': products
+#     }
+#     return render(request, 'list.html', context)
+
+
+
+
+
+
+
+
+
+# @require_POST
+# def cart_add(request, product_id):
+#     cart = Cart(request)  # create a new cart object passing it the request object 
+#     product = get_object_or_404(Product, id=product_id) 
+#     form = CartAddProductForm(request.POST)
+#     if form.is_valid():
+#         cd = form.cleaned_data
+#         cart.add(product=product, quantity=cd['quantity'], update_quantity=cd['update'])
+#     return redirect('cart:cart_detail')
+
+
+# def cart_remove(request, product_id):
+#     cart = Cart(request)
+#     product = get_object_or_404(Product, id=product_id)
+#     cart.remove(product)
+#     return redirect('cart:cart_detail')
+
+
+# def cart_detail(request):
+#     cart = Cart(request)
+#     for item in cart:
+#         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
+#     return render(request, 'cart/detail.html', {'cart': cart})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def addToCart(request,pk):
+
+#     try:
+#         the_id = request.session['cart_id']
+#     except:
+#         new_cart= Cart()
+#         new_cart.save()
+#         request.session['cart_id']= new_cart.id
+#         the_id=new_cart.id
+
+#     cart= Cart.objects.get(pk=pk)
+
+#     try:
+#         product = Product.objects.get(pk=pk)
+#     except Product.DoesNotExist:
+#         pass
+
+#     if not product in cart.products.all():
+#         cart.products.add(product)
+#     else:
+#         cart.products.remove(product)
+
+#     new_total= 0.00
+#     for item in cart.products.all():
+#         new_total += float(item.price)
+
+#     request.session['item_total'] = cart.products.count()
+#     cart.total = new_total
+#     cart.save()
+
+#     return HttpResponseRedirect(reverse(home))
+
+# class addToCart(TemplateView):
+
+
+    
+#      return render(request,"cartView.html",{'cartView':cartView})
+
+    # template_name = "cart.html"
+
+    # def get_context_data(self, **kwargs):
+    #     context=super().get_context_data(**kwargs)
+
+    #     # Get product by id
+    #     product_id = self.kwargs['pro_id']
+
+    #     # get product
+    #     product_obj = Product.objects.get(id=product_id)
+
+    #     # check if cart exists
+    #     cart_id= self.request.session.get('cart_id', None)
+    #     if cart_id:
+            
+    #         cart_odj= Cart.objects.get(id=cart_id)    
+    #         this_product_in_cart=cart_odj.cartproduct_set.filter(product= product_obj)
+         
+    #         # if items already exists in cart
+    #         if this_product_in_cart.exists():
+    #             cartproduct = this_product_in_cart.last()
+    #             cartproduct.quantity += 1 
+    #             cartproduct.subtotal += product_obj.price
+    #             cartproduct.save()
+
+    #             cart_obj.total += product_obj.price
+    #             cart_obj.save()
+    
+    #         # item is not available in the cart product,,item is added to cart product
+    #         else:
+              
+    #             cartproduct=CartProduct.objects.create(cart=cart_odj,product=product_obj,quantity=1,subtotal=product_obj.price)
+    #             cart_obj.total += product_obj.price
+    #             cart_obj.save()
+    #     else:
+    #         cart_obj= Cart.objects.create(total=0)
+    #         self.request.session["cart_id"]=cart_obj.id
+    #         cartproduct=CartProduct.objects.create(
+    #                 cart=cart_obj,product=product_obj,quantity=1,subtotal=product_obj.price)
+    #         cart_obj.total += product_obj.price
+    #         cart_obj.save()
+       
+    #     return context
+   
+  
+
+# def cartView(request):
+#     try:
+#         the_id= request.session['cart_id']
+#     except:
+#         the_id= None
+#     if the_id:
+#         cart=   Cart.objects.get(id=the_id)
+#         context={"cart":cart}
+#     else:
+#         context={"empty": True}
+
+#     return render(request,"cartView.html",context)
+
