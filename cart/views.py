@@ -3,7 +3,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from sokoapp.models import Product
 from .cart import Cart
-from .forms import CartAddProductForm
+from .forms import *
+from sokoapp.forms import *
+from sokoapp.models import NewsLetterRecipients
+from sokoapp.emails import send_welcome_email
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 
 
 
@@ -30,3 +34,20 @@ def cart_detail(request):
         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
     return render(request, 'detail.html', {'cart': cart})
 
+def details(request):
+
+    if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('detail')
+            print('valid')
+    else:
+        form = NewsLetterForm()
+
+    return render(request, "detail.html", {'Form': form})

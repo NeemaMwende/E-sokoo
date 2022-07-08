@@ -33,12 +33,8 @@ INSTALLED_APPS = [
     'tinymce',
 
     "cart",
-      
-
-     
     
     'django.contrib.sites',
-
 
     'allauth',
     'allauth.account',
