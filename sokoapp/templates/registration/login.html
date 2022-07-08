@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+{% load static %}
+{% load socialaccount %}
 
 <div class="container">
     <div class="row">
@@ -9,11 +11,16 @@
             <form action="" method="post" novalidate>
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-sm btn-info">Login</button>
+                <button class="btn btn-sm btn-info">Sign In</button>
+                <div class="form-group">
+                    <small class>Don't have an account yet? <a href="{% url 'signup' %}">Sign Up</a></small> <small class>or use </small>
+                    or use 
+                    <a href="{% provider_login_url 'google' method='oauth2' %}"><img src="{% static 'images/google.jpg'%}" style="width: 4%; height:4%"></a> <small class="">to sign up</small>
+                </div>
             </form>
         </div>
-        <div class="col-md-3"></div>
-    </div>
+        
+    </div> 
 </div>
 
 {% endblock %}
