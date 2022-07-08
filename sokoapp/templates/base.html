@@ -39,12 +39,13 @@
 <body> 
    
           {% include 'navbar.html' %}
+
           <br><br>
          <div style="background-color: #fff;"> 
           {% block content %}{%endblock%} 
          </div>
-      
-          {% include 'footer.html' %}
+         {% include 'footer.html' %}
+         
     
 
     {% block scripts %}

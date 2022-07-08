@@ -1,9 +1,5 @@
-/* ====================================== 
-	16. Footer-Area
-======================================== */
-
 .footer-top {
-    background: rgba(0, 0, 0, 0) url("img/bg/footer-bg.jpg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../images/footer-bg.jpg") no-repeat scroll center center / cover;
     position: relative;
 }
 
@@ -175,5 +171,3 @@
     background: #f6416c none repeat scroll 0 0;
     color: #fff;
 }
-
-

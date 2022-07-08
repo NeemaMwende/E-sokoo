@@ -63,32 +63,115 @@ def home(request):
 
     return render(request, "home.html", {'Form': form})
 
-  
+# def home2(request):
+#     if request.method == 'POST':
+#         form = NewsLetterForm(request.POST)
+#         if form.is_valid():
+#             name = form.cleaned_data['name']
+#             email = form.cleaned_data['email']
 
+#             recipient = NewsLetterRecipients(name=name, email=email)
+#             recipient.save()
+#             send_welcome_email(name,email)
+#             HttpResponseRedirect('footer')
+#             print('valid')
+#     else:
+#         form = NewsLetterForm()
+
+#     return render(request, "footer.html", {'Form': form})
+
+    
+    
+    
+    
+    
+    
 def women(request):
-    return render(request,"women.html")
+     if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('women')
+            print('valid')
+     else:
+        form = NewsLetterForm()
+     return render(request, "women.html", {'Form': form})
 
 
 def men(request):
-    return render(request,"men.html")
+     if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('men')
+            print('valid')
+     else:
+        form = NewsLetterForm()
+     return render(request, "men.html", {'Form': form})
 
     
 def shop(request):
    products = Product.objects.all
+   if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('shop')
+            print('valid')
+        else:
+         form = NewsLetterForm()
    return render(request,"shop.html",{'products':products})
 
 def about(request):
-    return render(request,"about.html")
+     if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('about')
+            print('valid')
+     else:
+        form = NewsLetterForm()
+     return render(request, "about.html", {'Form': form})
 
 
 
 
 def shop(request):
-    
-    return render(request,"shop.html")
+     if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
 
-def about(request):
-    return render(request,"about.html")
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('shop')
+            print('valid')
+     else:
+        form = NewsLetterForm()
+     return render(request, "shop.html", {'Form': form})
+
     
 
 def signup(request):
@@ -107,7 +190,20 @@ def signup(request):
 
 
 def profile(request):
-    return render(request,"registration/profile.html",)
+     if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            recipient = NewsLetterRecipients(name=name, email=email)
+            recipient.save()
+            send_welcome_email(name,email)
+            HttpResponseRedirect('profile')
+            print('valid')
+     else:
+        form = NewsLetterForm()
+     return render(request,"registration/profile.html",)
 
 
 

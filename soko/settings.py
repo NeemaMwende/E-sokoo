@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'sokoapp',
     'bootstrap4',
     'crispy_forms',
+    'tinymce',
 
     "cart",
     
@@ -75,8 +76,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'soko.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -85,8 +84,6 @@ DATABASES = {
         'NAME': 'esokoo',
         'USER': 'moringa',
         'PASSWORD': 'esokoo',
-      
-
     }
 }
 

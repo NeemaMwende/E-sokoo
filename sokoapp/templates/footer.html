@@ -1,5 +1,4 @@
 
-{% load bootstrap4 %}
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
@@ -23,34 +22,35 @@
 <body>
     
 
-    <footer class="footer-area">
+    <footer class="footer-area" id="contact">
         <div class="footer-top">
             <div class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="single-footer footer-logo">
-                                <img src="img/logo.png" alt="" />
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                            <div class="single-footer footer-logo fs-4">
+                                <img src="" alt="" />
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of kdnkdsncds kdfn kfjgkfdjg dfjlk classical Latin literature from 45 BC, making it over 2000 years old.</p>
                             </div>
+ 
                         </div>
                         <div class="col-lg-3 col-md-4" id="contact">
                             <div class="single-footer footer-contact">
                                 <h2>contact us</h2>
                                 <ul>
                                     <li>
-                                        <i class="sp-phone"></i> 
-                                        <span>(+254) 251984203</span>
+                                        <i class="fa-solid fa-phone fs-4"></i>
+                                        <span style="text-decoration:none; font-size:15px;">(+254) 251984203</span>
                                     </li>
                                     <li>
-                                        <i class="sp-email"></i>
-                                        <span>E-soko@gmail.com</span>
-                                        <span>E-soko@email.info</span>
+                                        <i class="fa-solid fa-at fs-4"></i>
+                                        <span style="text-decoration:none; font-size:15px;">e-soko@gmail.com</span>
+                                        <span style="text-decoration:none; font-size:15px;">e-soko@email.info</span>
                                     </li>
                                     <li>
-                                        <i class="sp-map-marker"></i> 
-                                        <span>77-100 Nairobi</span>
-                                        <span>Nairobi-3050 Kenya.</span>
+                                        <i class="fa-solid fa-location-dot fs-4"></i>
+                                        <span style="text-decoration:none; font-size:15px;">77-100 Nairobi</span>
+                                        <span style="text-decoration:none; font-size:15px;">Nairobi-3050 Kenya.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -60,17 +60,17 @@
                                 <h2>company</h2>
                                 <ul>
                                     {% if user.is_authenticated%}
-                                    <li><a href="{% url 'profile' %}">Profile</a></li>
-                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'profile' %}">Profile</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'logout' %}">Logout</a></li>
                                     {% else %}
-                                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                                    <li><a href="{% url 'login' %}">Sign in</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'signup' %}">Sign Up</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold"href="{% url 'login' %}">Sign in</a></li>
                                    
                                     {% endif %}
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-md-4 text-light">
                             <div class="single-footer footer-message">
                                 <div class="container-fluid">
                                     <legend class="text-center border-bottom">Subscribe to Our Newsletter</legend>
@@ -89,28 +89,25 @@
         <div class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 text-start">
                         <div class="copyright-brief">
                             <p>Copyright &copy; <a href="https://themeforest.net/user/codecarnival/portfolio">E-soko</a> All right reserved</p>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6" style="float:left">
                         <div class="footer-social text-center text-md-end">
-                            <a href="#"><i class="sp-facebook"></i></a>
-                            <a href="#"><i class="sp-twitter"></i></a>
-                            <a href="#"><i class="sp-linkedin"></i></a>
-                            <a href="#"><i class="sp-google"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-google"></i></a>
                         </div>
-                    </div> -->
+                    </div> 
                 </div>
             </div>
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <!-- FOOTER-AREA END -->
 </body>
-</html><!-- FOOTER-AREA START -->
+</html>
 
