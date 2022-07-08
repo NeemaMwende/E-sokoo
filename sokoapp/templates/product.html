@@ -25,25 +25,24 @@
             <div class="row" style="margin-top: 2%;">
                      {% for product in products %}
                              <div class="col-md-3">
-                                <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="width:auto; height=150px border-radius:; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
+                                <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="width:auto; height=150px border-radius:; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);"class="image-fluid">
                              </div>
-                            <div class="caption col-md-2 text-center" style="border-right: 1px solid rgba(255,255,255,0.5); border-radius:1px">
-                                <h3 class="text-center">
+                            <div class="caption col-md-2 text-cente">
+                                <h3 class="text-ce">
                                     {{ product.name }}
                                 </h3>
-                                <p class="text-center">Kshs. {{ product.price }}</p> 
+                                <p class="text-c">Kshs. {{ product.price }}</p> 
                               
                                 <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                                     {% csrf_token %}
                                     {{ cart_product_form }}
                                     <input type="submit" value="Add to cart" class="btn btn-sm btn-outline-primary">
                                 </form> 
-                                <br>
                                 <p>{{ product.description|safe|linebreaksbr }}</p>
                             </div>
                           {% endfor %}
 
-                           <div class="col-md-2 col-sm-offset-1 blog-sidebar text-end">
+                           <div class="col-md-2 col-sm-offset-1 blog-sidebar text-end"style="border-left: 1px solid #270A0A; border-radius:5px">
                                 <div class="sidebar-module">
                                   <h4>Categories</h4>
                                 
