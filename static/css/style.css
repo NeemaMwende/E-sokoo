@@ -1202,13 +1202,12 @@ label {
     text-decoration: none;
 }
 
-.header-area {}
+
 
 .product-area {
     Margin-bottom: 75px;
 }
 
-.best-sell-area {}
 
 .service-area {
     padding-top: 30px;
@@ -1314,10 +1313,6 @@ label {
     border-bottom: 1px solid #666;
 }
 
-.header-top-left {}
-
-.header-top-left ul {}
-
 .header-top-left li {
     border-right: 1px solid #666;
     color: #bdbdbd;
@@ -1409,7 +1404,6 @@ label {
     width: 150px;
 }
 
-.header-search button {}
 
 .header-search button i {
     color: #cacaca;
@@ -1422,12 +1416,6 @@ label {
 .main-header {
     padding: 14px 0 13px;
 }
-
-.logo {}
-
-.main-menu {}
-
-.main-menu>nav>ul {}
 
 .main-menu>nav>ul>li {
     display: inline-block;
@@ -1580,8 +1568,6 @@ label {
 .total-cart {
     float: right;
 }
-
-.total-cart ul {}
 
 .total-cart ul li {
     position: relative;
@@ -1941,7 +1927,6 @@ label {
 /*----------------------------------------
 	6. Product-Area
 ----------------------------------------*/
-.product-area {}
 
 .product-area .section-title {
     margin-bottom: 20px;
@@ -1959,7 +1944,6 @@ label {
     position: relative;
 }
 
-.primary-photo {}
 
 .primary-photo img {
     width: 100%;
@@ -1986,8 +1970,6 @@ label {
     margin-top: 20px;
     text-align: center;
 }
-
-.pro-rating {}
 
 .pro-rating a i {
     font-size: 13px;
@@ -2037,8 +2019,6 @@ label {
     width: 100%;
     z-index: -1;
 }
-
-.product-photo>a {}
 
 .single-product:hover .product-photo>a::before {
     opacity: 0.5;
@@ -2238,8 +2218,6 @@ label {
 .cdown:last-child {
     margin-bottom: 0;
 }
-
-.cdown span {}
 
 .cdown p {
     margin: 8px 0 0;
@@ -3345,8 +3323,6 @@ label {
     color: #f6416c;
 }
 
-.widget-categories ul li:hover a {}
-
 .sidebar-title {
     border: 1px solid #dedede;
     color: #333;
@@ -3379,8 +3355,6 @@ label {
 .widget-color ul li:last-child a {
     margin-right: 0;
 }
-
-.widget-color ul li:hover a {}
 
 .widget-color ul li a.color-1 {
     background: #005B7F;
@@ -3490,7 +3464,6 @@ label {
     padding-left: 30px;
 }
 
-.shop-list {}
 
 .shop-content .shop-grid .col-lg-4:nth-child(-n+6) {
     margin-bottom: 30px;
@@ -3766,7 +3739,6 @@ label {
 
 .cart-plus-minus {
     display: inline-block;
-    float: left;
     margin-right: 10px;
     position: relative;
 }
@@ -3965,7 +3937,6 @@ label {
     width: 100%;
 }
 
-.review-form-wrapper input[type="email"] {}
 
 .review-form-wrapper input[type="submit"] {
     background: #252525 none repeat scroll 0 0;
@@ -4641,7 +4612,6 @@ p.lost-password a:hover {
     width: 100%;
 }
 
-.coupon-info p.form-row-last {}
 
 .coupon-info p.form-row input[type="submit"]:hover,
 p.checkout-coupon input[type="submit"]:hover {
@@ -4665,7 +4635,6 @@ p.lost-password a {
     color: #f6416c;
 }
 
-p.checkout-coupon {}
 
 p.checkout-coupon input[type="text"] {
     height: 36px;
@@ -4694,7 +4663,6 @@ p.checkout-coupon input[type="submit"] {
     padding-bottom: 30px;
 }
 
-.checkbox-form {}
 
 .checkbox-form h3 {
     border-bottom: 1px solid #e5e5e5;
@@ -4711,7 +4679,6 @@ p.checkout-coupon input[type="submit"] {
     border: medium none;
     color: #fff;
     display: inline-block;
-    float: left;
     font-size: 12px;
     font-weight: 700;
     height: 40px;
@@ -5041,7 +5008,6 @@ h3.comment-reply-title {
     margin-right: 5px;
 }
 
-.comments-content-wrap span a:hover {}
 
 span.post-time {
     margin-right: 5px;
