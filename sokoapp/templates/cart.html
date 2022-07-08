@@ -79,7 +79,7 @@
                                 </form>
                             </td>
                             <td>
-                                <a style="text-decoration:none;" href="{% url "cart:cart_remove" product.id %}">Remove</a>
+                                <a style="text-decoration:none;" class="btn btn-sm btn-outline-danger" href="{% url "cart:cart_remove" product.id %}">Remove</a> 
                             </td>
                             <td>kshs. {{ item.price }}</td>
                             <td>kshs. {{ item.total_price }}</td>

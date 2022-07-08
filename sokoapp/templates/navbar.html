@@ -1,10 +1,10 @@
 
 <nav class="navbar navbar-expand-lg mb-2 bg-light fs-6 fixed-top bg-body shadow-lg rounded">
-  <a class="navbar-brand fs-2 fw-bold  ml-2" href="#">E-Soko</a>
+  <a class="navbar-brand fs-2 fw-bold  ml-2" href="{% url 'home'  %}">E-Soko</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse fs-5" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse fs-5 fw-light" id="navbarNavDropdown">
     <ul class="navbar-nav mx-auto">   
       <li class="nav-item">
         <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'home'  %}">Home <span class="sr-only">(current)</span></a>
@@ -12,14 +12,17 @@
       <li class="nav-item">
         <a class="nav-link" style="color: rgb(0, 0, 10)" href="{% url 'about'  %}">About Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'men' %}">Men</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" style="color: rgb(0, 0, 10)" href="{% url 'women' %}">Ladies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'product_list'  %}">Shop</a>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  style="color: rgb(0, 0, 10)" href="{% url 'product_list'  %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item fs-5"  style="color: rgb(0, 0, 10)" href="{% url 'men' %}">Men</a>
+          <hr>
+          <a class="dropdown-item fs-5" style="color: rgb(0, 0, 10)" href="{% url 'women' %}">Ladies</a>
+          <hr>
+           <a class="dropdown-item fs-5"  style="color: rgb(0, 0, 10)" href="{% url 'product_list'  %}">Shop</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link"  style="color: rgb(0, 0, 10)" href="#contact">Contact Us</a>
@@ -27,23 +30,28 @@
      
     </ul>
   </div>
-    <div class="col-2 text-end"  >  
+    <div class="col-2 d-flex align-items-center" style="" >  
         <ul class="nav navbar-nav navbar-right">
-              <li>
-               <a title="Like" href=""> <i class="text-danger fs-3 fa-solid fa-heart mr-3"></i></a>
-            </li>  
-            <li>
-               <a title="Cart" href="/cart/"><i class="text-dark  fs-4 fa-solid fa-cart-shopping mr-3"></i></a>
-            </li>
+                 <li>
+                    <a title="Like" href=""> <i class=" mt-2 text-danger fs-3 fa-solid fa-heart mr-3"></i></a>
+                  </li>  
                 {% if user.is_authenticated%}
-                  <li><a  title="Profile"style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'profile' %}"> <i class="text-dark fs-4 fa-solid fa-user mr-3"></i></a></li>
-                  <li><a title="Logout"style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'logout' %}"><i class="fs-4 text-dark fa-solid fa-right-from-bracket mr-2"></i></a></li>
+                  <li>
+                    <a  title="Profile"style="text-decoration:none; font-size:13px; font-weight:bold" href="{% url 'profile' %}"> <i class=" mt-2 text-dark fs-4 fa-solid fa-user mr-3"></i></a>
+                  </li>
+                   <li>
+                     <a title="Cart" href="/cart/"><i class="mt-2 text-dark  fs-4 fa-solid fa-cart-shopping mr-3"></i></a>
+                  </li>
+                  <li>
+                    <a title="Logout"style="text-decoration:none; font-size:13px; font-weight:bold" href="{% url 'logout' %}"><i class=" mt-2 fs-4 text-dark fa-solid fa-right-from-bracket mr-3"></i></a>
+                  </li>
                   {% else %}
-                {% comment %} <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'signup' %}">Sign Up</a></li> {% endcomment %}
-                <li><a style="text-decoration:none; font-size:15px; font-weight:bold;" title="Login" class="mr-3"href="{% url 'login' %}"><i class="fs-4 text-dark fa-solid fa-arrow-right-to-bracket"></i></a></li>                  
-              {% endif %}
-       
-    
+                   <button type="button" class=" btn btn-outline-primary me-3">
+                        <a style="text-decoration:none; font-size:15px; color:black; font-weight:bold;" title="Login" class=""href="{% url 'login' %}">Login</a>
+                  </button>
+              {% endif %} 
+                 
+           
          </ul> 
     </div> 
 </nav>
