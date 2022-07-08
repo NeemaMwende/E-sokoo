@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -5,6 +6,13 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from sokoapp.forms import NewsLetterForm
 from sokoapp.models import NewsLetterRecipients
 from .emails import send_welcome_email
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import SignupForm
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -23,20 +31,14 @@ def home(request):
     else:
         form = NewsLetterForm()
 
-    return render(request, "home.html", {'letterForm': form})
+    return render(request, "home.html", {'Form': form})
 
 
-=======
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect, get_object_or_404
-from .forms import SignupForm
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
+
+
+
 # Create your views here.
-def home(request):
-    return render(request,"home.html")
+
   
 def women(request):
     return render(request,"women.html")
@@ -47,6 +49,7 @@ def men(request):
 
 
 def shop(request):
+    
     return render(request,"shop.html")
 
 def about(request):
@@ -68,3 +71,7 @@ def signup(request):
 def profile(request):
     return render(request,"registration/profile.html",)
 
+# def photo_category(request, category_photo):
+#     images = PhotoImage.filter_by_location(location)
+#     print(images)
+#     return render(request, '.html', {'category_images': images})
