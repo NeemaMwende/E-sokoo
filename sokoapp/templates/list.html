@@ -45,8 +45,8 @@
                                 <div class="sidebar-module">
                                   <h4>Categories</h4>
                                 
-                                    <h5 {% if not category %} class="active"{% endif %}>
-                                      <a href="{% url 'product_list' %}">All </a><h5>
+                                    <h4 {% if not category %} class="active"{% endif %}>
+                                      <a href="{% url 'product_list' %}">All </a><h4>
                                   {% for c in categories %}
                                    <h6 {% if category.slug == c.slug %} class="active" {% endif %}>
                                         {{ c.name }}</h6>

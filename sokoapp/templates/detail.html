@@ -14,7 +14,21 @@
                     <ul class="bread-crumb clearfix">
                         <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
                         <li>Shop Now!!!</li>
+                        <br><br>
+                           <li class="">
+                            {% with totail_items=cart|length %}
+                                {% if cart|length > 0 %}
+                                    Your Orders:
+                                    <h6 style="color: black">
+                                       <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    Kshs.<b>{{ cart.get_total_price }}</b>
+                                    </h6>
+                                    {% else %}
+                                    Your cart is empty.
+                                {% endif %}
+                            {% endwith %}
+                            </li>
                     </ul>
+              
                 </div>
             </div>
         </section>
@@ -26,8 +40,8 @@
                 {% with totail_items=cart|length %}
                     {% if cart|length > 0 %}
                         My Shopping Order:
-                        <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
-                            {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                        <a style="color: black; font-size: 14px;">
+                           <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    Kshs.<b>{{ cart.get_total_price }}</b>
                         </a>
                         {% else %}
                         Your cart is empty.
@@ -43,7 +57,7 @@
                         <th>Quantity</th>
                         <th>Remove</th>
                         <th>Unit Price</th>
-                        <th>Price</th>
+                        <th>Total Price</th>
                     </tr>
                 </thead>
                 <tbody>
