@@ -39,7 +39,7 @@ def product_list(request, category_slug=None):
         'products': products,
         'cart_product_form': cart_product_form
     }
-    return render(request, 'list.html', context)
+    return render(request, 'product.html', context)
 
 
 
@@ -63,28 +63,7 @@ def home(request):
 
     return render(request, "home.html", {'Form': form})
 
-# def home2(request):
-#     if request.method == 'POST':
-#         form = NewsLetterForm(request.POST)
-#         if form.is_valid():
-#             name = form.cleaned_data['name']
-#             email = form.cleaned_data['email']
 
-#             recipient = NewsLetterRecipients(name=name, email=email)
-#             recipient.save()
-#             send_welcome_email(name,email)
-#             HttpResponseRedirect('footer')
-#             print('valid')
-#     else:
-#         form = NewsLetterForm()
-
-#     return render(request, "footer.html", {'Form': form})
-
-    
-    
-    
-    
-    
     
 def women(request):
      if request.method == 'POST':

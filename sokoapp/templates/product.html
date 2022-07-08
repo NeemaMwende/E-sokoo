@@ -12,8 +12,10 @@
                 <div class="content-box text-center">
                     <h1>Products</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
+                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li> 
                         <li>Products</li>
+                        <li><i class="fs-6 fa-solid fa-cart-shopping"></i><a   style="text-decoration:none;"  href="/cart/">Cart</a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -34,7 +36,7 @@
                                 <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                                     {% csrf_token %}
                                     {{ cart_product_form }}
-                                    <input type="submit" value="Add to cart" class="action-btn">
+                                    <input type="submit" value="Add to cart" class="btn btn-sm btn-outline-primary">
                                 </form> 
                                 <br>
                                 <p>{{ product.description|safe|linebreaksbr }}</p>

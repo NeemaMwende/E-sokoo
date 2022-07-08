@@ -32,22 +32,6 @@ def cart_detail(request):
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
-    return render(request, 'detail.html', {'cart': cart})
+    return render(request, 'cart.html', {'cart': cart})
 
-def details(request):
 
-    if request.method == 'POST':
-        form = NewsLetterForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-
-            recipient = NewsLetterRecipients(name=name, email=email)
-            recipient.save()
-            send_welcome_email(name,email)
-            HttpResponseRedirect('detail')
-            print('valid')
-    else:
-        form = NewsLetterForm()
-
-    return render(request, "detail.html", {'Form': form})
