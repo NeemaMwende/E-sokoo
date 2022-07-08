@@ -30,9 +30,14 @@ INSTALLED_APPS = [
     'sokoapp',
     'bootstrap4',
     'crispy_forms',
+
+    "cart",
+      
+
      
     
     'django.contrib.sites',
+
 
     'allauth',
     'allauth.account',
@@ -79,12 +84,14 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'esoko',
         'USER': 'flo',
         'PASSWORD': 'flo',
         'HOST': 'localhost',
         'PORT': '',
+
     }
 }
 
@@ -151,6 +158,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+CART_SESSION_ID = 'cart'
+
+CRISPY_TEMPLATE_PACK ="bootstrap4" 
+
 # Email configurations remember to install python-decouple
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')
@@ -174,3 +186,4 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
     }
+
