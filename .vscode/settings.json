@@ -1,7 +1,23 @@
 {
     "cSpell.words": [
+<<<<<<< HEAD
         "fasho",
         "numbertext",
         "upcomming"
+=======
+        "aligncenter",
+        "alignleft",
+        "alignright",
+        "browserupgrade",
+        "chooseus",
+        "fasho",
+        "floatleft",
+        "floatright",
+        "myaccount",
+        "numbertext",
+        "topcategory",
+        "upcomming",
+        "webp"
+>>>>>>> 93cdde6076661bfdcb7c98ceb0e0ab5170900e5c
     ]
 }

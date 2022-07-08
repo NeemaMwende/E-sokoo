@@ -29,6 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sokoapp',
     'bootstrap4',
+<<<<<<< HEAD
+=======
+    'crispy_forms',
+>>>>>>> 93cdde6076661bfdcb7c98ceb0e0ab5170900e5c
 
 ]
 
@@ -68,12 +72,23 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'esoko',
         'USER': 'flo',
         'PASSWORD': 'flo',
         'HOST': 'localhost',
         'PORT': '',
+=======
+
+       
+
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'soko',
+        'USER': 'moringa',
+    'PASSWORD':'Access',
+
+>>>>>>> 93cdde6076661bfdcb7c98ceb0e0ab5170900e5c
     }
 }
 
@@ -137,4 +152,13 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+=======
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+CRISPY_TEMPLATE_PACK ="bootstrap4" 
+
+LOGIN_REDIRECT_URL ="home"
+
+>>>>>>> 93cdde6076661bfdcb7c98ceb0e0ab5170900e5c
