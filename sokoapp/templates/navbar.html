@@ -13,13 +13,13 @@
         <a class="nav-link" style="color: rgb(0, 0, 10)" href="{% url 'about'  %}">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'men' %}">Mens</a>
+        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'men' %}">Men</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" style="color: rgb(0, 0, 10)" href="{% url 'women' %}">Women</a>
+        <a class="nav-link" style="color: rgb(0, 0, 10)" href="{% url 'women' %}">Ladies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'shop' %}">Shop</a>
+        <a class="nav-link"  style="color: rgb(0, 0, 10)" href="{% url 'product_list'  %}">Shop</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  style="color: rgb(0, 0, 10)" href="#contact">Contact Us</a>
@@ -28,7 +28,10 @@
     </ul>
   </div>
     <div class="col-2 text-end"  >  
-        <ul class="nav navbar-nav navbar-right"> 
+        <ul class="nav navbar-nav navbar-right">
+              <li>
+               <a title="Like" href=""> <i class="text-danger fs-3 fa-solid fa-heart mr-3"></i></a>
+            </li>  
             <li>
                <a title="Cart" href="/cart/"><i class="text-dark  fs-4 fa-solid fa-cart-shopping mr-3"></i></a>
             </li>
@@ -39,9 +42,7 @@
                 {% comment %} <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'signup' %}">Sign Up</a></li> {% endcomment %}
                 <li><a style="text-decoration:none; font-size:15px; font-weight:bold;" title="Login" class="mr-3"href="{% url 'login' %}"><i class="fs-4 text-dark fa-solid fa-arrow-right-to-bracket"></i></a></li>                  
               {% endif %}
-           <li>
-               <a title="Like" href=""> <i class="text-danger fs-3 fa-solid fa-heart mr-1"></i></a>
-            </li> 
+       
     
          </ul> 
     </div> 
