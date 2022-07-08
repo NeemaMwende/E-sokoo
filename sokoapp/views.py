@@ -49,7 +49,7 @@ def men(request):
 
 
 def shop(request):
-    products = Product.objects.filter(available=True)
+    
     return render(request,"shop.html")
 
 def about(request):
