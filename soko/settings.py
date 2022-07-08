@@ -77,12 +77,23 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'esoko',
+#         'USER': 'flo',
+#         'PASSWORD': 'flo',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'esoko',
-        'USER': 'flo',
-        'PASSWORD': 'flo',
+        'NAME': 'soko',
+        'USER': 'moringa',
+        'PASSWORD': 'Access',
         'HOST': 'localhost',
         'PORT': '',
     }
