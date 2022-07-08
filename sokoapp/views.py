@@ -1,18 +1,13 @@
-
-from django.shortcuts import render
-
-from django.http import HttpResponse, Http404, HttpResponseRedirect
-
-from sokoapp.forms import NewsLetterForm
-from sokoapp.models import NewsLetterRecipients
-from .emails import send_welcome_email
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import SignupForm
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+
+from .forms import NewsLetterForm, SignupForm
+from .models import NewsLetterRecipients
+from .emails import send_welcome_email
 
 # Create your views here.
 def home(request):
@@ -33,12 +28,6 @@ def home(request):
 
     return render(request, "home.html", {'Form': form})
 
-
-
-
-
-# Create your views here.
-
   
 def women(request):
     return render(request,"women.html")
@@ -54,6 +43,7 @@ def shop(request):
 
 def about(request):
     return render(request,"about.html")
+    
 def signup(request):
     if request.method=="POST":
      form=UserCreationForm(request.POST)

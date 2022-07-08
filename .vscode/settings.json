@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
+<<<<<<< HEAD
+        "fasho",
+        "numbertext",
+        "upcomming"
+=======
         "aligncenter",
         "alignleft",
         "alignright",
@@ -13,5 +18,6 @@
         "topcategory",
         "upcomming",
         "webp"
+>>>>>>> 93cdde6076661bfdcb7c98ceb0e0ab5170900e5c
     ]
 }
