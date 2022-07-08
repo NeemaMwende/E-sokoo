@@ -1,9 +1,9 @@
-
 .shop-border {
     background: #dedede none repeat scroll 0 0;
     display: block;
     height: 1px;
 }
+
 
 /* Women's page -Sidebar */
 
@@ -48,7 +48,6 @@
     color: #f6416c;
 }
 
-
 .widget-brand ul {
     border: 1px solid #dedede;
     border-top: 0;
@@ -68,10 +67,7 @@
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
-
     line-height: 24px;
-}
-
     margin-left: 10px;
     text-transform: uppercase;
 }
@@ -79,7 +75,6 @@
 .widget-brand ul li a:hover {
     color: #f6416c;
 }
-
 
 .sidebar-title {
     border: 1px solid #dedede;
@@ -92,7 +87,9 @@
     text-transform: uppercase;
 }
 
+
 /* SHOP CONTENT */
+
 .shop-content .product-brief-inner {
     padding: 0;
 }
@@ -125,7 +122,6 @@
     height: 0;
 }
 
-
 .shop-grid .product-brief h2,
 .shop-grid .product-brief h3 {
     font-size: 16px;
@@ -146,12 +142,10 @@
     background: #7f7f7f none repeat scroll 0 0;
 }
 
-
 .shop-grid .single-product:hover .product-brief h2 a,
 .shop-grid .single-product:hover .product-brief h3 {
     color: #fff;
 }
-
 
 .single-product-aea {
     margin-bottom: 72px;
@@ -167,7 +161,6 @@
     z-index: 9;
 }
 
-
 .single-product:hover .product-photo>a::before {
     opacity: 0.5;
     z-index: 99;
@@ -180,7 +173,6 @@
 .best-sell-product .single-product {
     margin-bottom: 45px;
 }
-
 
 .single-product.new-colect {
     float: left;
@@ -223,6 +215,7 @@
     padding-left: 5px;
     text-decoration: line-through;
 }
+
 
 /* PRODUCT */
 
@@ -371,7 +364,6 @@
     text-align: left;
 }
 
-
 .active-related-product .product-brief {
     text-align: center;
 }
@@ -421,7 +413,6 @@
     transform: scale(1);
     opacity: 0.2;
 }
-
 
 .banner-6 {
     margin-top: 50%;
@@ -496,4 +487,3 @@
     margin-left: 10px;
     text-decoration: line-through;
 }
-

@@ -32,12 +32,8 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     "cart",
-      
-
-     
     
     'django.contrib.sites',
-
 
     'allauth',
     'allauth.account',
@@ -86,11 +82,10 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'esoko',
-        'USER': 'flo',
-        'PASSWORD': 'flo',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'esokoo',
+        'USER': 'moringa',
+        'PASSWORD': 'esokoo',
+      
 
     }
 }
