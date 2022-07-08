@@ -26,7 +26,7 @@ def home(request):
     else:
         form = NewsLetterForm()
 
-    return render(request, "home.html", {'letterForm': form})
+    return render(request, "home.html", {'Form': form})
 
   
 def women(request):
@@ -38,10 +38,12 @@ def men(request):
 
 
 def shop(request):
+    
     return render(request,"shop.html")
 
 def about(request):
     return render(request,"about.html")
+    
 def signup(request):
     if request.method=="POST":
      form=UserCreationForm(request.POST)
@@ -59,3 +61,7 @@ def signup(request):
 def profile(request):
     return render(request,"registration/profile.html",)
 
+# def photo_category(request, category_photo):
+#     images = PhotoImage.filter_by_location(location)
+#     print(images)
+#     return render(request, '.html', {'category_images': images})
