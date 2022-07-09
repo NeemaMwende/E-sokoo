@@ -14,11 +14,20 @@
                 </div>
             </div>
     </section>
+        {%if messages%}
+                {%for message in messages%}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {%endfor%}
+        {%endif%}   
+    <br> 
 <div class="container">
-    <div class="row" style="margin-top: 6%">
+    <div class="row" style="margin-top: 2%">
         <div class="col-md-8 col-md-offset-2">
-            <h3 class="page-header">Thank You For Shopping With Us
-            </h3>
+            <h4 class="page-header">Hello <span class="fw-bold text-muted">{{user}}</span>,</h4>
+               <h5> Thank You For Shopping With E-SOKO</h5>
             <p>Your order has been successfully completed. Your order number is <strong>{{ order.id }}</strong>.</p>
         </div>
     </div>

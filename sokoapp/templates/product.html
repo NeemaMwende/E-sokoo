@@ -14,16 +14,23 @@
                     <ul class="bread-crumb clearfix">
                         <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li> 
                         <li>Products</li>
-                        <li><i class="fs-6 fa-solid fa-cart-shopping"></i><a   style="text-decoration:none;"  href="/cart/">Cart</a></li>
-                       
+                        <li><i class="fs-6 fa-solid fa-cart-shopping"></i><a   style="text-decoration:none;"  href="/cart/">Cart</a></li>    
                     </ul>
                 </div>
             </div>
         </section>
         <!--title-->
+        {%if messages%}
+            {%for message in messages%}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {%endfor%}
+        {%endif%}  
    <div class="container">
             <div class="row" style="margin-top: 2%;">
-                     {% for product in products %}
+                {% for product in products %}
                              <div class="col-md-3">
                                 <img src="{% if product.photo %} {{ product.photo.url }} {% else %} {% static 'images/menf.jpg' %} {% endif %}" alt="..." style="width:auto; height=150px border-radius:; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);"class="image-fluid">
                              </div>
@@ -40,7 +47,7 @@
                                 </form> 
                                 <p>{{ product.description|safe|linebreaksbr }}</p>
                             </div>
-                          {% endfor %}
+                    {% endfor %}
 
                            <div class="col-md-2 col-sm-offset-1 blog-sidebar text-end"style="border-left: 1px solid #270A0A; border-radius:5px">
                                 <div class="sidebar-module">
