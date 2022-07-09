@@ -13,14 +13,14 @@
                     <h1>E-SOKO Cart</h1>
                     <ul class="bread-crumb clearfix">
                         <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
-                        <li>Shop Now!!!</li>
+                        <li><a   style="text-decoration:none;"  href="{% url 'product_list'  %}">Shop Now!!!</li>
                         <br><br>
                            <li class="">
                             {% with totail_items=cart|length %}
                                 {% if cart|length > 0 %}
                                     Your Orders:
                                     <h6 style="color: black">
-                                       <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    Kshs.<b>{{ cart.get_total_price }}</b>
+                                       <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    $.<b>{{ cart.get_total_price }}</b>
                                     </h6>
                                     {% else %}
                                     Your cart is empty.
@@ -41,7 +41,7 @@
                     {% if cart|length > 0 %}
                         My Shopping Order:
                         <a style="color: black; font-size: 14px;">
-                           <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    Kshs.<b>{{ cart.get_total_price }}</b>
+                           <b> {{ totail_items }}</b> item{{ totail_items|pluralize }},    $ <b>{{ cart.get_total_price }}</b>
                         </a>
                         {% else %}
                         Your cart is empty.
@@ -81,15 +81,15 @@
                             <td>
                                 <a style="text-decoration:none;" class="btn btn-sm btn-outline-danger" href="{% url "cart:cart_remove" product.id %}">Remove</a> 
                             </td>
-                            <td>kshs. {{ item.price }}</td>
-                            <td>kshs. {{ item.total_price }}</td>
+                            <td>$. {{ item.price }}</td>
+                            <td>$. {{ item.total_price }}</td>
                         </tr>
                     {% endwith %}
                 {% endfor %}
                 <tr style="background-color: #5AC8FA">
                     <td><b>Total</b></td>
                     <td colspan="4"></td>
-                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                    <td colspan="num"><b>$.{{ cart.get_total_price }}</b></td>
                 </tr>
                 </tbody>
             </table>
