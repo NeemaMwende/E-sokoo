@@ -31,11 +31,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'tinymce',
-
     "cart",
-    
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

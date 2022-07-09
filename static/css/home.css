@@ -7,6 +7,12 @@ body {
     float: left
 }
 
+
+/* #nav:hover {
+    color: #f6416c;
+    text-decoration: none;
+} */
+
 .floatright {
     float: right
 }

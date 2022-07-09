@@ -1,14 +1,10 @@
-from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from sokoapp.models import Product
+from .models import OrderItem
+from sokoapp.forms import *
 from .cart import Cart
 from .forms import *
-from sokoapp.forms import *
-from sokoapp.models import NewsLetterRecipients
-from sokoapp.emails import send_welcome_email
-from django.http import HttpResponse, Http404, HttpResponseRedirect
-
 
 
 @require_POST
@@ -27,11 +23,28 @@ def cart_remove(request, pk):
     cart.remove(product)
     return redirect('product_list')
 
-
 def cart_detail(request):
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
-    return render(request, 'cart.html', {'cart': cart})
+    return render(request, 'cart/cart.html', {'cart': cart})
 
 
+def checkout(request):
+    cart = Cart(request)
+    if request.method == 'POST':
+        form = OrderCreateForm(request.POST)
+        if form.is_valid():
+            order = form.save()
+            for item in cart:
+                OrderItem.objects.create(
+                    order=order,
+                    product=item['product'],
+                    price=item['price'],
+                    quantity=item['quantity']
+                )
+            cart.clear()
+        return render(request, 'cart/ordered.html', {'order': order})
+    else:
+        form = OrderCreateForm()
+    return render(request, 'cart/order.html', {'form': form})
