@@ -27,18 +27,18 @@
     <div class="row" style="margin-top: 2%">
           <h3 class="page-header">Hello <span class="fw-bold text-muted">{{user}}</span>,</h3>
           
-        <div class="col-md-7 col-md-offset-2 mt-4">
+        <div class="col-md-6 col-md-offset-2 mt-4">
           
                <h5> Thank You For Shopping With E-SOKO</h5>
             <p>Your order has been successfully completed. Your order number is <strong>{{ order.id }}</strong>.</p>
            
         </div>
-          <div class="col-md-4 col-md-offset-2">
+          <div class="col-md-6 col-md-offset-2">
 
               <h4> Proceed to Payment.</h4>
-              <h5 class="list-group-item text-center">
+              <h6 class="list-group-item">
                     <div id="paypal-button-container"></div>
-              </h5>     
+              </h6>     
         </div>
     </div>
 </div>
@@ -56,7 +56,7 @@
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: 'cart.get_total_price' // Can also reference a variable or function
+            value: '77.44' // Can also reference a variable or function
           }
         }]
       });
