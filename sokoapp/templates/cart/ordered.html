@@ -6,10 +6,10 @@
             <div class="pattern-layer"></div>
             <div class="auto-container">
                 <div class="content-box text-center">
-                    <h1>E-SOKO <br>Orders & Payments</h1>
+                    <h1>E-SOKO <br>purchase_units</h1>
                     <ul class="bread-crumb clearfix">
                         <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
-                        <li>Orders $ payments</li>
+                        <li>purchase_units</li>
                     </ul>
                 </div>
             </div>
@@ -30,56 +30,10 @@
         <div class="col-md-6 col-md-offset-2 mt-4">
           
                <h5> Thank You For Shopping With E-SOKO</h5>
-            <p>Your order has been successfully completed. Your order number is <strong>{{ order.id }}</strong>.</p>
+            <p>Your purchase has been successfully completed. Your purchase id number is <strong>{{ order.id }}</strong>.</p>
            
-        </div>
-          <div class="col-md-6 col-md-offset-2">
-
-              <h4> Proceed to Payment.</h4>
-              <h6 class="list-group-item">
-                    <div id="paypal-button-container"></div>
-              </h6>     
         </div>
     </div>
 </div>
 <br><hr><br>
-
-<script src="https://www.paypal.com/sdk/js?client-id=AWQQF4mX3ATIFfGhbt8s35e7EXNWj-hZGZKQNg-5I4UpVdMopq2x7UByv2wblPcs2onEAHVYT3OdkZjR&disable-funding=credit,card"></script>
-<script>
-  paypal.Buttons({
-      style: {
-        color: 'silver',
-        shape:'pill',
-    },
-    // Sets up the transaction when a payment button is clicked
-    createOrder: (data, actions) => {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: '77.44' // Can also reference a variable or function
-          }
-        }]
-      });
-    },
-    // Finalize the transaction after payer approval
-    onApprove: (data, actions) => {
-      return actions.order.capture().then(function(orderData) {
-        // Successful capture! For dev/demo purposes:
-        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-        const transaction = orderData.purchase_units[0].payments.captures[0];
-        alert(`Transaction ${transaction.status}: ${transaction.id}\n\n It was nice doing business with you,\n E-Soko we are grateful,\n welcome once again`);
-        const element = document.getElementById('paypal-button-container');
-        element.innerHTML = '<h3>Thank you for your payment!</h3>';
-        // Or go to another URL:  actions.redirect('thank_you.html');
-      });
-    },  
-    onCancel:function(data) {
-         alert(`Transaction ${transaction.status}: ${transaction.id}\n\n You cancelled your transaction.`);
-         const element = document.getElementById('paypal-button-container');
-         element.innerHTML = '<h3>You Cancelled your payment process!!!!</h3>';
-    }
-  }).render('#paypal-button-container');
-</script>
-
-
 {% endblock %}

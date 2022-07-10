@@ -34,6 +34,8 @@ def cart_detail(request):
 
 def checkout(request):
     cart = Cart(request)
+    for item in cart:
+        item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -47,7 +49,13 @@ def checkout(request):
                 )
             cart.clear()
             messages.success(request,f'Your order was successfully processed.')
-        return render(request, 'cart/ordered.html', {'order': order})
+        return render(request, 'cart/ordered.html', {'order': order,'cart': cart})
     else:
         form = OrderCreateForm()
-    return render(request, 'cart/order.html', {'form': form})
+    return render(request, 'cart/order.html', {'form': form,'cart': cart})
+
+# def checkout(request):
+#     cart = Cart(request)
+  
+#     return render(request, 'cart/order.html', {})
+
