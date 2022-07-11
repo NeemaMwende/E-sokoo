@@ -15,7 +15,7 @@ def home(request):
  
     return render(request, 'home.html')
 
-@login_required
+
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()[::-1]

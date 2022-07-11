@@ -9,7 +9,7 @@ from .cart import Cart
 from .forms import *
 
 
-@login_required
+
 @require_POST
 def cart_add(request, pk):
     cart = Cart(request)
@@ -26,7 +26,8 @@ def cart_remove(request, pk):
     product = get_object_or_404(Product, pk=pk)
     cart.remove(product)
     return redirect('product_list')
-
+    
+@login_required
 def cart_detail(request):
     cart = Cart(request)
     for item in cart:
