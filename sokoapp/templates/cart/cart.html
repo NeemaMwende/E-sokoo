@@ -10,10 +10,10 @@
             <div class="pattern-layer"></div>
             <div class="auto-container">
                 <div class="content-box text-center">
-                    <h1>E-SOKO Cart</h1>
+                    <h1>E-<span style="font-size:45px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">SOKO</span> Cart</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;"  href="{% url 'home'  %}">Home</a></li>
-                        <li><a   style="text-decoration:none;"  href="{% url 'product_list'  %}">Shop Now!!!</li>
+                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;color:black;"  href="{% url 'home'  %}">Home</a></li>
+                        <li><a   style="text-decoration:none; color:black"  href="{% url 'product_list'  %}">Shop Now!!!</li>
                         <br>
                            <li class="">
                             {% with totail_items=cart|length %}

@@ -6,22 +6,31 @@
 {% load socialaccount %}
 
 <div class="container">
+     <div class="mb-3 mt-3 text-center"style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
+        <h3><span style="font-size:30px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">Create Account</span> <span style="font-size:30px; color:black;margin-left:10px">with E-SOKO</span></h3>
+    </div>
+
     <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <form action="" method="post" novalidate>
+        <div class="col-md-6" style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);">
+                                    
+            <form action="" method="post" novalidate   style="padding:10px; font-size:20px;">
+
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-sm btn-info">Sign Up</button>
-                <div class="form-group">
-                    <small class>Already have an account? <a href="{% url 'login' %}">Sign In</a></small> 
+                <button class="btn2 btn-lg btn-outline-info">Sign Up</button>
+                <br>
+                <hr>
+                <div class="form-group text-center">
+                    <small class="fs-6">Already have an account? <br><a class="btn btn-primary "href="{% url 'login' %}">Login</a></small> 
                     <small class>or use </small>
-                <a href="{% provider_login_url 'google' method='oauth2' %}"><img src="{% static 'images/google.jpg'%}" style="width: 4%; height:4%"></a> <small class>to log in</small>
+                <a href="{% provider_login_url 'google' method='oauth2' %}"><img src="{% static 'images/google.jpg'%}" style="width: 10%; height:10%"></a> <small class="">to Login</small>
                 </div>
+                <hr>
             </form>
         </div>
         <div class="col-md-3"></div>
     </div>
 </div>
-
+<br>
 {% endblock %}

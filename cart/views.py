@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from sokoapp.models import Product
 from django.contrib import messages
@@ -8,6 +9,7 @@ from .cart import Cart
 from .forms import *
 
 
+@login_required
 @require_POST
 def cart_add(request, pk):
     cart = Cart(request)
@@ -53,9 +55,4 @@ def checkout(request):
     else:
         form = OrderCreateForm()
     return render(request, 'cart/order.html', {'form': form,'cart': cart})
-
-# def checkout(request):
-#     cart = Cart(request)
-  
-#     return render(request, 'cart/order.html', {})
 
