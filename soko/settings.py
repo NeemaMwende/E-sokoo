@@ -158,10 +158,10 @@ CRISPY_TEMPLATE_PACK ="bootstrap4"
 
 # Email configurations remember to install python-decouple
 EMAIL_USE_TLS = True
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@sandbox7895da5ac08144e89546d986e38d677e.mailgun.org'
+EMAIL_HOST_PASSWORD = '14b3a1ab9895cf41ea987baf9a118134-1b8ced53-2fce739a'
 
 CRISPY_TEMPLATE_PACK ="bootstrap4" 
 LOGIN_URL='/login/'
