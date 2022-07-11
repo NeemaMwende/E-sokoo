@@ -38,7 +38,7 @@
                                 <h3 class="text-ce">
                                     {{ product.name }}
                                 </h3>
-                                <p class="text-c">$. {{ product.price }}</p> 
+                                <p class="text-c"> Price: <b>$. {{ product.price }}</b></p> 
                               
                                 <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                                     {% csrf_token %}
@@ -46,22 +46,26 @@
                                     <input type="submit" value="Add to cart" class="btn btn-sm btn-outline-primary">
                                 </form> 
                                 <p>{{ product.description|safe|linebreaksbr }}</p>
+                                
                             </div>
+                            <br><br> 
+                           
                     {% endfor %}
-
-                           <div class="col-md-2 col-sm-offset-1 blog-sidebar text-end"style="border-left: 1px solid #270A0A; border-radius:5px">
+                     <div class="col-md-2 col-sm-offset-1 blog-sidebar text-end"style="border-left: 1px solid #270A0A; border-radius:5px">
                                 <div class="sidebar-module">
                                   <h4>Categories</h4>
                                 
-                                    <h4 {% if not category %} class="active"{% endif %}>
-                                      <a href="{% url 'product_list' %}">All </a><h4>
+                                    <h3 {% if not category %} class="active"{% endif %}>
+                                      <a style="text"href="{% url 'women' %}">All </a><h3>
                                   {% for c in categories %}
                                    <h6 {% if category.slug == c.slug %} class="active" {% endif %}>
                                         {{ c.name }}</h6>
                                    {% endfor %}
                                  </div>  
                              </div>
-               </div>        
-    </div>
-    <br><br>
+     
+                   </div>        
+        </div>  
+               
+<br><br>
 {% endblock %}

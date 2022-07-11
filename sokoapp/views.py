@@ -18,8 +18,8 @@ def home(request):
 @login_required
 def product_list(request, category_slug=None):
     category = None
-    categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
+    categories = Category.objects.all()[::-1]
+    products = Product.objects.filter(available=True)[::-1]
     cart_product_form = CartAddProductForm()
     
     if category_slug:
