@@ -29,3 +29,7 @@ sqlparse==0.4.2
 typing_extensions==4.3.0
 urllib3==1.26.10
 whitenoise==6.2.0
+heroku run python manage.py migrate
+
+$ heroku pg:reset
+$ heroku pg:push esokoo DATABASE_URL --app e-soko-botique
