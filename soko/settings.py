@@ -157,11 +157,12 @@ CRISPY_TEMPLATE_PACK ="bootstrap4"
 
 # Email configurations remember to install python-decouple
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'postmaster@sandbox7895da5ac08144e89546d986e38d677e.mailgun.org'
-EMAIL_HOST_PASSWORD = '14b3a1ab9895cf41ea987baf9a118134-1b8ced53-2fce739a'
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
 
 CRISPY_TEMPLATE_PACK ="bootstrap4" 
 LOGIN_URL='/login/'
@@ -172,11 +173,7 @@ SOCIALACCOUNT_PROVIDERS = {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        'APP': {
-            'client_id': '1095415596020-pduft037kf8rffbah51s7dd51ae8niga.apps.googleusercontent.com',
-            'secret': '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',
-            'key': ''
-        }
+    
     }
     }
 
