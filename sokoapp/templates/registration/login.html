@@ -3,20 +3,7 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% load socialaccount %}
-<style>
-    #id_login{
-        color:green;
 
-
-    }
-  #id_password{
-        color:green;
-
-
-    }
-
-
-</style>
  {% block content %}
  <div class="container">
       <div class="mb-3 mt-3 text-center"style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
@@ -48,19 +35,5 @@
 <br><hr><br>
 
 {% endblock %}
-{% block common_scripts %}
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  // Load jquery straight from the cdn for this page.
-  $(function() {
-    // We need some mappings for Providers names from AllAuth to the icon class names.
-    $('.btn-google').addClass('btn-google-plus');
-    $('.btn-linkedin_oauth2').addClass('btn-linkedin');
-    $('.fa-linkedin_oauth2').addClass('fa-linkedin');
-    $('#id_login').addClass('form-control').removeAttr('autofocus').blur();
-    $('#id_password').addClass('form-control');
-  });
-</script>
 
-{% endblock %}

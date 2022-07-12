@@ -29,31 +29,34 @@
       </li>
      
     </ul>
-  </div>
-    <div class="col-2 d-flex align-items-center" style="" >  
-        <ul class="nav navbar-nav navbar-right">
-                 <li>
-                    <a title="Like" href=""> <i class=" mt-2 text-danger fs-3 fa-solid fa-heart mr-3"></i></a>
-                  </li>  
+
+    <ul class="nav navbar-nav navbar-right">
+        <div class="col-3" style="margin-right:10" >  
+                   {% comment %} <li>
+                    <a title="Like" href=""> <i class="mt-2 text-danger fs-3 fa-solid fa-heart mr-3"></i></a>
+                  </li>  {% endcomment %}
                 {% if user.is_authenticated%}
-                  <li>
-                    <a  title="Profile"style="text-decoration:none; font-size:13px; font-weight:bold" href="{% url 'profile' %}"> <i class=" mt-2 text-dark fs-4 fa-solid fa-user mr-3"></i></a>
-                  </li>
+                  {% comment %} <li>
+                    <a  title="Profile"style="text-decoration:none; font-size:13px; font-weight:bold" href="{% url 'profile' %}"> </a>
+                  </li> {% endcomment %}
                    <li>
-                     <a title="Cart" href="/cart/"><i class="mt-2 text-dark  fs-4 fa-solid fa-cart-shopping mr-3"></i></a>
+                     <a title="Cart" href="/cart/"><i class="mt-2 text-danger  fs-4 fa-solid fa-cart-shopping mr-3"></i></a>
                   </li>
                   <li>
                     <a title="Logout"style="text-decoration:none; font-size:13px; font-weight:bold" href="{% url 'logout' %}"><i class=" mt-2 fs-4 text-dark fa-solid fa-right-from-bracket mr-3"></i></a>
                   </li>
                   {% else %}
                    <button type="button" class=" btn3 btn-outline-info">
-                        <a style="text-decoration:none; font-size:19px; color:red; font-weight:bold;" title="Login" class=""href="{% url 'login' %}">Login</a>
+                        <a style="text-decoration:none; font-size:18px; color:red; font-weight:bold;" title="Login" class=""href="{% url 'login' %}">Login</a>
                   </button>
               {% endif %} 
                  
+      </div> 
+            
            
          </ul> 
-    </div> 
+  </div>
+  
 </nav>
 <br><br>
 

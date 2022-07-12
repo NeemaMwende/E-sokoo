@@ -62,12 +62,11 @@
                                 <h2>company</h2>
                                 <ul>
                                     {% if user.is_authenticated%}
-                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'profile' %}">Profile</a></li>
-                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'logout' %}">Logout</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'profile' %}"><i class=" mt-2 text-danger fs-4 fa-solid fa-user mr-3"></i>Profile</a></li>
+                                    <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'logout' %}"><i class=" mt-2 fs-4 text-danger fa-solid fa-right-from-bracket mr-3"></i>Logout</a></li>
                                     {% else %}
                                     <li><a style="text-decoration:none; font-size:15px; font-weight:bold" href="{% url 'signup' %}">Sign Up</a></li>
                                     <li><a style="text-decoration:none; font-size:15px; font-weight:bold"href="{% url 'login' %}">Sign in</a></li>
-                                   
                                     {% endif %}
                                 </ul>
                             </div>

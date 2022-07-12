@@ -451,7 +451,7 @@ li.nav-item:hover {
     line-height: 26px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #222;
+    color: rgb(192, 85, 85);
     text-align: center;
     border: 2px solid #222;
     padding: 14px 39px;
@@ -479,7 +479,7 @@ li.nav-item:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #222;
+    background: rgb(133, 64, 64);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
