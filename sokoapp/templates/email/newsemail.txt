@@ -1,5 +1,4 @@
 <h2>Hello {{name}}, </h2>
-
     <h6>Welcome to E-Soko.Feel free to shop with us and don't forget to subscribe to our Newsletter and Stay in the loop and be updated on the newest products on E-soko.
     <br>
     @esokomanagement
