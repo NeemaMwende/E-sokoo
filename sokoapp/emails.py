@@ -13,3 +13,17 @@ def send_welcome_email(name,receiver):
     msg = EmailMultiAlternatives(subject,text_content,sender,[receiver])
     msg.attach_alternative(html_content,'text/html')
     msg.send()
+
+
+# def send_welcome_email(name,receiver):
+#     # Creating message subject and sender
+#     subject = 'E-SOKO'
+#     sender = 'esokoapp2222@gmail.com'
+
+#     #passing in the context vairables
+#     text_content = render_to_string('email/registeremail.txt',{"name": name})
+#     html_content = render_to_string('email/registeremail.html',{"name": name})
+
+#     msg = EmailMultiAlternatives(subject,text_content,sender,[receiver])
+#     msg.attach_alternative(html_content,'text/html')
+#     msg.send()

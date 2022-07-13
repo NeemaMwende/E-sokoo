@@ -106,7 +106,7 @@ def about(request):
      if request.method == 'POST':
         form = NewsLetterForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
+            name = form.cleaned_data['name']  
             email = form.cleaned_data['email']
 
             recipient = NewsLetterRecipients(name=name, email=email)
@@ -125,6 +125,13 @@ def signup(request):
      if form.is_valid():
          form.save()
          username= form.cleaned_data["username"]
+         email = form.cleaned_data['email']
+      
+
+        #  recipient = SignupForm(username=username, email=email)
+        #  recipient.save()
+         send_welcome_email(username,email) 
+         
          messages.success(request,f"Hi { username }, your account has been created successfully!")
          return redirect("login")
     else:
