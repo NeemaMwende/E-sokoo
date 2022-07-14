@@ -19,14 +19,17 @@ oauthlib==3.2.0
 Pillow==9.2.0
 psycopg2-binary==2.9.3
 pycparser==2.21
+pycryptodome==3.15.0
 PyJWT==2.4.0
 python-decouple==3.6
+python-pesa==0.7
 python3-openid==3.2.0
 pytz==2022.1
 requests==2.28.1
 requests-oauthlib==1.3.1
 soupsieve==2.3.2.post1
 sqlparse==0.4.2
+stripe==3.5.0
 typing_extensions==4.3.0
 urllib3==1.26.10
 whitenoise==6.2.0
