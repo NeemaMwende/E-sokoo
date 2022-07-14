@@ -156,13 +156,6 @@ CART_SESSION_ID = 'cart'
 CRISPY_TEMPLATE_PACK ="bootstrap4" 
 
 # Email configurations remember to install python-decouple
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'esokoapp2222@gmail.com'
-EMAIL_HOST_PASSWORD = 'asdecdipccmhfufs'
-
 
 # EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 # EMAIL_HOST = config('EMAIL_HOST')
@@ -187,7 +180,5 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
     }
-STRIPE_SECRET_KEY ='sk_test_51LKQ9EJ6gWzyyic0gE82O1RmqtPxvPkeQ2zamVyoOdrNtai1cklDByE4gvBfFaoXcslhHdzMyMiPl1vUnoymHsSo00i9q3OnZp'
-STRIPE_PUBLISHABLE_KEY ='pk_test_51LKQ9EJ6gWzyyic0xie7IB6JxzVKCjD08LJZGpjs1VDfcHbRa6OWyToMwiacx8vsZJ6PLmyTLUJ1HnReeKkroweO00eckJeivf'
 
 django_on_heroku.settings(locals())
