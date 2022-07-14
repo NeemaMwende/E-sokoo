@@ -1,13 +1,61 @@
+from contextvars import Context
+import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from sokoapp.models import Product
 from django.contrib import messages
+from django.views import generic
 from .models import OrderItem
 from sokoapp.forms import *
 from .cart import Cart
 from .forms import *
+import stripe
+from django.conf import settings
+from django.urls import reverse
+# This is your test secret API key.
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
+
+class CheckoutSession(generic.View):
+  def post(self,request, *args, **kwargs):
+
+    host = self.request.get_host()
+    payment_method_type=['card'],
+
+    checkout_session = stripe.checkout.Session.create(
+            line_items=[{
+      'price_data': {
+        'currency': 'usd',
+        'product_data': {
+          'name': 'e soko products',
+        },
+        'unit_amount': 2000,
+      },
+      'quantity': 1,
+    }],
+    mode='payment',
+    success_url='http://{}{}'.format(host,reverse('cart:success')),
+    cancel_url='http://{}{}'.format(host,reverse('cart:cancel')),
+
+    )
+    return redirect(checkout_session.url, code=303)
+
+def Success(request):
+    context ={
+
+        'payment':'success'
+    }
+ 
+    return render(request, 'cart/success.html',context)
+
+def Cancel(request):
+    context ={
+
+        'payment':'succ'
+    }
+    return render(request, 'cart/success.html',context)
 
 
 @require_POST

@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Your Shopping Cart| Thank you {% endblock %} 
+{% block content %}
+  <section class="page-title centred">
+            <div class="pattern-layer"></div>
+            <div class="auto-container">
+                <div class="content-box text-center">
+                    <h1><span style="font-size:45px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">E-SOKO</span> Purchase_units</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none; color:black;"  href="{% url 'home'  %}">Home</a></li>
+                        <li style="color:black">Stripe Payment</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    {% if payment == 'succ' %}
+    <br> 
+<div class="container">
+    <div class="row" style="margin-top: 2%">
+          <h3 class="page-header">Hello <span class="fw-bold text-muted">{{user}}</span>,</h3>
+          
+        <div class="col-md-6 col-md-offset-2 mt-4">
+          
+               <h5> Thank You For Shopping With E-SOKO</h5>
+            <p>Your purchase has been successfully completed. Your purchase id number is <strong>{{ order.id }}</strong>.</p>
+           
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="text-center mt-2">
+  <h6> Opps!!!! Something Went Wrong ,you can try again later,<br>use PayPal</h6>
+   <a href="/cart/checkout/" class="btn2 mb-3 mt-3"><i class="fa-solid fa-arrow-left mr-2"></i>PayPal</a>
+</div>
+  {% endif%}
+<br><hr><br>
+{% endblock %}

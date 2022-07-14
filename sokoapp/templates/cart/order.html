@@ -60,10 +60,19 @@
                 {% endfor %} 
                 <li class="list-group-item active btn3 text-light"> Total Cost: $. <b> {{ cart.get_total_price }} </b></li>
             </ul> 
-            <br><hr><br>
+            <br><hr>
+             <h3 class="mt-5">
+               Payment Methods:
+              </h3> 
+              <hr> 
+            <br>
                <h6 class="list-group-item">
                     <div id="paypal-button-container"></div>
               </h6> 
+             <form action="{% url 'cart:CheckoutSession'%}" method="POST">
+              {% csrf_token %}
+              <button type="submit" style="border-radius:20px" class=" fs-4 btn btn-lg btn-block btn-outline-secondary text-primary" id="checkout-button">Stripe</button>
+             </form>
         </div>
 
         <div class="col-md-5" style="border: 1px solid #eee;padding: 2%;border-radius: 3px;box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid">
@@ -75,7 +84,14 @@
                  <br>
                 <input type="submit" class="btn3 btn-sm btn-outline-primary" value="checkout">
             </form>
-        </div>
+            
+        
+        </div> 
+
+
+
+       
+ 
     </div>
 </div>
 <br><hr>
@@ -113,6 +129,5 @@
     }
   }).render('#paypal-button-container');
 </script>
-
 
 {% endblock %}

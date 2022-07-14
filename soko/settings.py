@@ -187,5 +187,7 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
     }
+STRIPE_SECRET_KEY ='sk_test_51LKQ9EJ6gWzyyic0gE82O1RmqtPxvPkeQ2zamVyoOdrNtai1cklDByE4gvBfFaoXcslhHdzMyMiPl1vUnoymHsSo00i9q3OnZp'
+STRIPE_PUBLISHABLE_KEY ='pk_test_51LKQ9EJ6gWzyyic0xie7IB6JxzVKCjD08LJZGpjs1VDfcHbRa6OWyToMwiacx8vsZJ6PLmyTLUJ1HnReeKkroweO00eckJeivf'
 
 django_on_heroku.settings(locals())

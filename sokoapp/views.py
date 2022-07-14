@@ -115,7 +115,6 @@ def signup(request):
         #  recipient.save()
          send_welcome_email(username,email) 
          
-         messages.success(request,f"Hi { username }, your account has been created successfully!")
          return redirect("login")
     else:
          form=SignupForm()
