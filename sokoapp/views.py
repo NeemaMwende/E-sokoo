@@ -85,23 +85,6 @@ def men(request):
      return render(request, "men.html", {'Form': form})
 
     
-def shop(request):
-   products = Product.objects.all
-   if request.method == 'POST':
-        form = NewsLetterForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-
-            recipient = NewsLetterRecipients(name=name, email=email)
-            recipient.save()
-            send_welcome_email(name,email)
-            HttpResponseRedirect('shop')
-            print('valid')
-        else:
-         form = NewsLetterForm()
-   return render(request,"shop.html",{'products':products})
-
 def about(request):
      if request.method == 'POST':
         form = NewsLetterForm(request.POST)

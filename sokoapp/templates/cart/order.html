@@ -103,7 +103,7 @@
         const transaction = orderData.purchase_units[0].payments.captures[0];
         alert(`Transaction ${transaction.status}: ${transaction.id}\n\n Your payment was received successfully,you can proceed to Checkout`);
         const element = document.getElementById('paypal-button-container');
-        element.innerHTML = '<h3>Thank you for your payment you can proceed to Checkout!</h3>';
+        element.innerHTML = '<h4>Thank you for your payment you can proceed to Checkout!</h4>';
       });
     },  
     onCancel:function(data) {
