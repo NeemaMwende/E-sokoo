@@ -13,6 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d7ih3$=fc_)(w78u6nq($r+4**s$(@hw*=)v^p6it@@s0g#_j$'
 
+STRIPE_SECRET_KEY = "asQEfg92mf-Wafoi#k9"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -79,11 +80,11 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 
 DATABASES = {
     'default': {
-
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'esokoo',
-        'USER': 'moringa',
-        'PASSWORD': 'esokoo',
+        'NAME': 'esokos',
+        'USER': 'postgres',
+        'PASSWORD': 'esokos',
+        'HOST': 'localhost',
     }
 }
 
