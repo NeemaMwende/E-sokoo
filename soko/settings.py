@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'esokos',
+        'NAME': 'port',
         'USER': 'postgres',
-        'PASSWORD': 'esokos',
+        'PASSWORD': 'port',
         'HOST': 'localhost',
     }
 }
