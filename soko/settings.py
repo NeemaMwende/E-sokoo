@@ -1,7 +1,7 @@
 from pathlib import Path
 from decouple import config
 import os
-import django_on_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d7ih3$=fc_)(w78u6nq($r+4**s$(@hw*=)v^p6it@@s0g#_j$'
 
-STRIPE_SECRET_KEY = "asQEfg92mf-Wafoi#k9"
+STRIPE_SECRET_KEY = "sk_test_51Mv5ceEboUgW7qI2ZsZrrikrbudnhwKsiZrSDaEYMbWQaS7Gq7CevCwbxlVIsvyPj7T4gxJ8t3zHsB3n0Qrmt9vW002lOlA3Eg"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'esokos',
-        'USER': 'postgres',
-        'PASSWORD': 'esokos',
+        'NAME': 'esoko',
+        'USER': 'kalundakaluu',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
     }
 }
@@ -182,4 +182,3 @@ SOCIALACCOUNT_PROVIDERS = {
     }
     }
 
-django_on_heroku.settings(locals())

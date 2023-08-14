@@ -9,6 +9,7 @@ from sokoapp.models import Product
 from .forms import *
 from .models import *
 from .cart import *
+import requests
 
 
 def home(request):
@@ -33,6 +34,20 @@ def product_list(request, category_slug=None):
         'cart_product_form': cart_product_form
     }
     return render(request, 'product.html', context)
+
+
+def send_welcome_email(name, email):
+    subject = 'Welcome to My Newsletter!'
+    body = f"Hi {name},\n\nThanks for subscribing to my newsletter. I'll be sending you regular updates on my latest projects and articles.\n\nBest regards,\nJohn Doe"
+
+    return requests.post(
+        f"https://api.mailgun.net/v3/{settings.MAILGUN_DOMAIN}/messages",
+        auth=("api", settings.MAILGUN_API_KEY),
+        data={"from": "John Doe <john@example.com>",
+              "to": email,
+              "subject": subject,
+              "text": body})
+
 
 def home(request):
 
