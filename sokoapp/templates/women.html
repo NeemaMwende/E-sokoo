@@ -1,16 +1,19 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap4 %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-soko | Women</title>
 
-    <!-- Google Font -->
+ <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Esoko : Mens Outfit</title>
+	<meta name="description" content="Shopick – Fashion Store HTML Template is a clean and elegant design – suitable for selling clothing, fashion, high fashion, men fashion, women fashion, accessories, digital, kids, watches, jewelries, shoes, kids, furniture, sports, tools….. It has a fully responsive width adjusts automatically to any screen size or resolution.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<!-- Place favicon.ico in the root directory -->
+	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500.00,700,300' rel='stylesheet' type='text/css'>
 	
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -20,255 +23,395 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- style css -->
 	<link rel="stylesheet" href="../../static/css/women.css">
+	<!-- modernizr css -->
+	<script src="{% static 'men/js/vendor/modernizr-3.11.2.min.js'%}"></script>
 </head>
-
 <body>
-    <section class="page-title centred">
+
+	<section class="page-title centred">
         <div class="pattern-layer"></div>
         <div class="auto-container">
             <div class="content-box text-center">
-                <h1 class="page-banner-title"><span style="font-size:45px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">Ladies</span> Fashion </h1>
+                <h1 class="page-banner-title"><span style="font-size:45px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">Womens'</span> Fashion </h1>
                 <ul class="bread-crumb clearfix">
-                    <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none;color:black;"  href="{% url 'home'  %}">Home</a></li>
-                    <li style="color:black;">Ladies' Fashion</li>
+                    <li><i class="fa-solid fa-house"></i><a   style="text-decoration:none; color:black;"  href="{% url 'home'  %}">Home</a></li>
+                    <li style="color:black;">Womens' Fashion</li>
                 </ul>
             </div>
         </div>
-    </section>
- 
-<br><br> <hr><br>
-    <div class="margin-bottom-80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <span class="shop-border"></span>
-                </div>
-                <div class="col-lg-3 order-lg-1 order-2">
-                        <!-- widget-brand start -->
-                    <aside class="widget widget-brand">
-                        <h5 class="sidebar-title">Brand</h5>
-                        <ul>
-                            <li><input type="checkbox" /><a  style="text-decoration:none"href="#">Country Road</a></li>
-                            <li><input type="checkbox" /><a  style="text-decoration:none"href="#">H&M Home</a></li>
-                            <li><input type="checkbox" /><a  style="text-decoration:none"href="#">Urban outfitters</a></li>
-                            <li><input type="checkbox" /><a style="text-decoration:none" href="#">Zara home</a></li>
-                        </ul>
-                    </aside>
-                    <!-- widget-brand end -->
-                    <!-- widget-categories start -->
-                    <aside class="widget widget-categories">
-                        <h5 class="sidebar-title">Categories</h5>
-                        <ul>
-                            
-                            <li><a  style="text-decoration:none" href="#">Mens</a></li>
-                            <li><a  style="text-decoration:none"href="#">Womens</a></li>
-                            <li><a  style="text-decoration:none"href="#">T-shirt</a></li>
-                            <li><a  style="text-decoration:none" href="#">Hoodies</a></li>
-                            <li><a  style="text-decoration:none"href="#">Tops</a></li>
-                            <li><a  style="text-decoration:none"href="#">Basics</a></li>
-                            <li><a  style="text-decoration:none"href="#">Accessories</a></li>
-                            <li><a  style="text-decoration:none"href="#">Modern Classics</a></li>
-                        </ul>
-                    </aside>
-                    <!-- widget-categories end -->
-                 
-                
-                </div>
-                
-                <div class="col-lg-9 order-1 order-lg-2">
-                    
-                    <!-- Shop-Content start -->
-                    <div class="shop-content">
-                        <!-- Shop-product start -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="grid-view">
-                                <div class="row shop-grid">
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/7.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/8.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i>
-                                                        <span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black" href="#">FLUFFY FAUX SWEATER</a></h2>
-                                                <h3>$23.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/3.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/4.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a style="text-decoration:none;color:black" href="#">WHITE SLEEVELED DRESS</a></h2>
-                                                <h3>$25.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/6.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/5.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-         
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black" href="#">YELLOW SWEATER</a></h2>
-                                                <h3>$35.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/1.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/2.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black"href="#">RED TWO PIECE</a></h2>
-                                                <h3>$50.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/9.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/10.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black" href="#">wHITE STRIPED BLOUSE</a></h2>
-                                                <h3>$50.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/11.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/12.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black"href="#">FLOWERED DRESS</a></h2>
-                                                <h3>$30.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                     <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/7.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/8.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i>
-                                                        <span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black" href="#">FLUFFY FAUX SWEATER</a></h2>
-                                                <h3>$45.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/3.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/4.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a style="text-decoration:none;color:black" href="#">WHITE SLEEVELED DRESS</a></h2>
-                                                <h3>$25.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                    <!-- Single-product start -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="single-product">
-                                            <div class="product-photo">
-                                                <a href="#">
-                                                    <img class="primary-photo" src="../../static/../../static/img/shop/6.jpg" alt="" />
-                                                    <img class="secondary-photo" src="../../static/../../static/img/shop/5.jpg" alt="" />
-                                                </a>
-                                                <div class="pro-action">
-                                                    <a href="{% url 'product_list'  %}" class="action-btn"><i class="text-light  fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-brief">
-                                                <h2><a  style="text-decoration:none;color:black" href="#">YELLOW SWEATER</a></h2>
-                                                <h3>$35.00</h3>
-                                            </div>
-                                        </div>
-                                    </div>		
-                                    <!-- Single-product end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Shop-product end -->
-                    </div>
-                    <!-- Shop-Content end -->
-                </div>
-            </div>
-        </div>r
-    </div>
-    <!-- SHOP-AREA END -->
-    <br>
+    </section> 
+	      <br><br> <hr><br>
+             
+	             
+		<!-- SHOP-AREA START -->
+		<div class="shop-area margin-bottom-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<span class="shop-border"></span>
+					</div>
+					   <div class="container widget widget-brand">				
+					  <ul class="nav shop-menu view-mode">
+						<li>
+							<a class="grid-view active"style="text-decoration:none" href="#grid-view" data-bs-toggle="tab"><i class="fa-solid fa-grid"></i>Grid View</a>
+						</li>
+						<li>
+							<a class="list-view"style="text-decoration:none;" class="ml-5" href="#list-view" data-bs-toggle="tab">List View</i></a>
+						</li>
+		          </ul>			
+			</div>
+					
+					<div class="col-lg-9 order-1 order-lg-2">
+						<!-- Shop-Content start -->
+						<div class="shop-content">
+							<!-- product-toolbar start -->
+						
+							<!-- product-toolbar end -->
+							<!-- Shop-product start -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="grid-view">
+									<div class="row shop-grid">
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/1.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/9.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														
+														<a href="{% url 'women'  %}" class="action-btn">
+															<i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i>
+															<span>Add to cart</span></a>
+														
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black"href="#">official suits</a></h2>
+													<h3>$45.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/2.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/5.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+														
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black"href="#">Sir Henry</a></h2>
+													<h3>$19.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/3.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/88.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black" href="#">Modern wear</a></h2>
+													<h3>$24.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/4.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/5.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black" href="#">Classic wear(Turkey)</a></h2>
+													<h3>$45.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/8.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/71.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+												</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black"href="#">Mr. Price</a></h2>
+													<h3>$35.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/1.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/12.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black;"href="#">Official Look</a></h2>
+													<h3>$24.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/3.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/32.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black" href="#">Clean elegant Suit</a></h2>
+													<h3>$46.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/2.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/64.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black" href="#">Premium Mr Price suits</a></h2>
+													<h3>$55.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+										<!-- Single-product start -->
+										<div class="col-xl-4 col-md-6">
+											<div class="single-product">
+												<div class="product-photo">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop/8.jpg'%}" alt="" />
+														<img class="secondary-photo" src="{% static 'men/img/shop/5.jpg'%}" alt="" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i><span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief">
+													<h2><a style="text-decoration:none;color:black;" href="#">Classic Suit(Sweden)</a></h2>
+													<h3>$45.00</h3>
+												</div>
+											</div>
+										</div>		
+										<!-- Single-product end -->
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="list-view"> 
+									<div class="row shop-list">
+									
+					
+										<!-- Single-product start -->
+										<div class="col-lg-12">
+											<div class="single-product row">
+												<div class="product-photo col-lg-6">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop-list/4.jpg'%}" alt="" style="width:500px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid" />
+														<img class="secondary-photo" src="{% static 'men/img/shop-list/11.jpg'%}" alt="" style="width:500px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i> <span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief col-lg-6" style="margin-top: 20%;">
+													<h2><a style="text-decoration:none;color:black" href="#">Lacina Linen Pant</a></h2>
+													<h3>$50.00</h3>
+													<div class="porduct-desc">
+														<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, temporamet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+													</div>
+													<div class="pro-quick-view">
+														<div class="quick-view">
+															<a href="#" data-bs-toggle="modal"  data-bs-target="#productModal" title="Quick View">Quick View</a>
+														</div>
+							
+													</div>
+												</div>
+											</div>	
+										</div>
+										<!-- Single-product end -->
+										<br>
+										<hr>
+										<!-- Single-product start -->
+										<div class="col-lg-12">
+											<div class="single-product row">
+												<div class="product-photo col-lg-6">
+													<a href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop-list/2.jpg'%}" alt="" style="width:400px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid"  />
+														<img class="secondary-photo" src="{% static 'men/img/shop-list/53.jpg'%}" alt="" style="width:400px;box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid"  />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i> <span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief col-lg-6" style="margin-top: 20%;">
+													<h2><a style="text-decoration:none;color:black"href="#">Lacina Linen Pant</a></h2>
+													<h3>$50.00</h3>
+													<div class="porduct-desc">
+														<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, temporamet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+													</div>
+													<div class="pro-quick-view">
+														<div class="quick-view">
+															<a style="text-decoration:none;"href="#" data-bs-toggle="modal"  data-bs-target="#productModal" title="Quick View">Quick View</a>
+														</div>
+													
+													</div>
+												</div>
+											</div>	
+										</div>
+										<!-- Single-product end -->
+										<br>
+										<hr>
+										<!-- Single-product start -->
+										<div class="col-lg-12">
+											<div class="single-product row">
+												<div class="product-photo col-lg-6">
+													<a style="text-decoration:none" href="#">
+														<img class="primary-photo" src="{% static 'men/img/shop-list/8.jpg'%}" alt="" style="width:400px;box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid" />
+														<img class="secondary-photo" src="{% static 'men/img/shop-list/52.jpg'%}" alt="" style="width:400px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);"class="image-fluid" />
+													</a>
+													<div class="pro-action">
+														<a href="{% url 'women'  %}" class="btn btn-sm action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i> <span>Add to cart</span></a>
+													</div>
+												</div>
+												<div class="product-brief col-lg-6" style="margin-top: 20%;">
+													<h2><a style="text-decoration:none"href="#">Lacina Linen Pant</a></h2>
+													<h3>$50.00</h3>
+													<div class="porduct-desc">
+														<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, temporamet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+													</div>
+													<div class="pro-quick-view">
+														<div class="quick-view">
+															<a style="text-decoration: none;color:black"href="#" data-bs-toggle="modal"  data-bs-target="#productModal" title="Quick View">Quick View</a>
+														</div>
+												
+													</div>
+												</div>
+											</div>	
+										</div>
+										<br>
+										<!-- Single-product end -->
+									</div>
+								</div>
+							</div>
+							<!-- Shop-product end -->
+						</div>
+						<!-- Shop-Content end -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SHOP-AREA END -->
+		
+		
+	</section>
+	<!-- PAGE-CONTENT END -->
+	
+
+	
+	<!-- QUICKVIEW PRODUCT -->
+	<div id="quickview-wrapper">
+	   <!-- Modal -->
+	   <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-product">
+							<div class="product-images">
+								<div class="main-image images">
+									<img alt="#" src="{% static 'images/menf.jpg' %}"/>
+								</div>
+							</div><!-- .product-images -->
+
+							<div class="product-info">
+								<h1>Aenean eu tristique</h1>
+								<div class="price-box-3">
+									<hr />
+									<div class="s-price-box">
+									
+										<span class="old-price">$19.00</span>
+									</div>
+									<hr />
+								</div>
+							
+								<div class="quick-add-to-cart">
+									<form method="post" class="cart">
+										<div class="numbers-row">
+											<input type="number" id="french-hens" value="3">
+										</div>
+										<a href="{% url 'product_list'  %}" class="btn btn-sm action-btn"><i class="text-light fs-4 fa-solid fa-cart-shopping mr-2" ></i>Add to cart</a>
+									</form>
+								</div>
+								<div class="quick-desc">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero.
+								</div>
+								
+							</div><!-- .product-info -->
+						</div><!-- .modal-product -->
+					</div><!-- .modal-body -->
+				</div><!-- .modal-content -->
+			</div><!-- .modal-dialog -->
+	   </div>
+	   <!-- END Modal -->
+	</div>
+	<!-- END QUICKVIEW PRODUCT -->
+<br><br><br>
     <!-- BANNER-AREA START -->
 			<div class="fix margin-bottom-80">
 				<div class="container">
@@ -282,6 +425,7 @@
 				</div>
 			</div>
 			<!-- BANNER-AREA END -->
+			<br><br>
 			<!-- BANNER-AREA START -->
 			<div class="fix margin-bottom-80">
 				<div class="container">
@@ -297,18 +441,41 @@
 									<h2 class="border-left-rights">product description</h2>
 								</div>
 								<h3><a  style="text-decoration:none" href="#">Slim Oxford Shirt</a></h3>
-								<span class="main-price">KSH 2999.44</span> <span class="old-price-2">KSH 4599.00</span>
+								<span class="main-price">$29.44</span> <span class="old-price-2">$45.00</span>
 								<p>An oxford shirt sharp and reliable essential. durable woven texture in premium two-ply cotton, it is the perfect complement to suiting and urban knits. </p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
-		</section>
+	<br><br>
+	<!-- all js here -->
+	<!-- jquery latest version -->
+	<script src="{% static 'men/js/jquery-3.6.0.min.js'%}"></script>
+	<script src="{% static 'men/js/vendor/jquery-migrate-3.3.2.min.js'%}"></script>
+	<!-- bootstrap js -->
+	<script src="{% static 'men/js/bootstrap.bundle.min.js'%}"></script>
+	<!-- jquery.nivo.slider js -->
+	<script src="{% static 'men/js/jquery.nivo.slider.js'%}"></script>
+	<script src="{% static 'men/home.js'%}"></script>
+	<!-- owl.carousel js -->
+	<script src="{% static 'men/js/owl.carousel.min.js'%}"></script>
+	<!-- meanmenu js -->
+	<script src="{% static 'men/js/jquery.meanmenu.js'%"></script>
+	<!-- jquery-ui js -->
+	<script src="{% static 'men/js/jquery-ui.min.js'%}"></script>
+	<!-- lightbox.min js -->
+	<script src="{% static 'men/js/lightbox.min.js'%}"></script>
+	<!-- countdon.min js -->
+	<script src="{% static 'men/js/countdon.min.js'%}"></script>
+	<!-- wow js -->
+	<script src="{% static 'men/js/wow.min.js'%}"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+	<!-- plugins js -->
+	<script src="{% static 'men/js/plugins.js'%}"></script>
+	<!-- main js -->
+	<script src="{% static 'men/js/main.js'%}"></script>
 
-        
-</body>
-</html>
 {% endblock %}
-
