@@ -3,36 +3,68 @@
 {% load static %}
 {% load socialaccount %}
 
- {% block content %}
- <div class="container">
-      <div class="mb-3 mt-3 text-center"style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
+{% block content %}
+<div class="container">
+    <div class="mb-3 mt-3 text-center" style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
         <h3><span style="font-size:30px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">Login Now</span> <span style="font-size:30px; color:black;margin-left:10px">with E-SOKO</span></h3>
     </div>
     <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-5"style="padding:10px;border: 1px solid #eee;border-radius:8px; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);">
+        <div class="col-md-5" style="padding:10px;border: 1px solid #eee;border-radius:8px; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);">
             <form action="" method="post" novalidate style="padding:10px;">
-             
                 {% csrf_token %}
                 {{ form|crispy }}
-                 <br>
-                  <p class="fs-6"><label for="id_remember">Remember Me:</label> <input type="checkbox" name="remember" id="id_remember"></p>           
-                    <button class="btn2 btn-lg btn-outline-info">Login</button>
-                    <a class="button secondaryAction" style="float: right; margin-right: 5px;"href="/accounts/password/reset/">Forgot Password?</a>
-                 <br><br><hr>
-                <div class="form-group text-center">   
-                    <small class="fs-6">Don't have an account yet? <br><a class="btn btn-sm btn-primary" href="{% url 'signup' %}">Sign Up</a></small> 
-                    or use 
-                    <a href="{% provider_login_url 'google' method='oauth2' %}"><img src="{% static 'images/google.jpg'%}" style="width: 10%; height:10%"></a> <small class=""> to sign up</small>.
+                <br>
+                <p class="fs-6"><label for="id_remember">Remember Me:</label> <input type="checkbox" name="remember" id="id_remember"></p>
+                <button class="btn2 btn-lg btn-outline-info">Login</button>
+                <a class="button secondaryAction" style="float: right; margin-right: 5px;" href="/accounts/password/reset/">Forgot Password?</a>
+                <br><br><hr>
+                <div class="form-group text-center">
+                    <small class="fs-6">Don't have an account yet? <br><a class="btn btn-sm btn-primary" href="{% url 'signup' %}" style="margin-top: 5px;">Sign Up</a></small>
+                    <a href="{% provider_login_url 'google' method='oauth2' %}" class="google-button">
+                        <div class="google-box">
+                            <img src="{% static 'images/google.jpg'%}" style="width: 5%; height:auto;">
+                            <span class="button-text">Continue with Google</span>
+                        </div>
+                    </a>
                 </div>
                 <hr>
             </form>
         </div>
-        
-    </div> 
+    </div>
 </div>
 <br><hr><br>
 
+<style>
+    .or {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .google-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .google-button {
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .google-button:hover .google-box {
+        background-color: #f1f1f1;
+    }
+
+    .button-text {
+        margin-left: 10px;
+    }
+</style>
+
 {% endblock %}
-
-
