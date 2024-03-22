@@ -20,7 +20,8 @@
                 <a class="button secondaryAction" style="float: right; margin-right: 5px;" href="/accounts/password/reset/">Forgot Password?</a>
                 <br><br><hr>
                 <div class="form-group text-center">
-                    <small class="fs-6">Don't have an account yet? <br><a class="btn btn-sm btn-primary" href="{% url 'signup' %}" style="margin-top: 5px;">Sign Up</a></small>
+                    <small class="fs-6">Don't have an account yet? <br><a class="btn btn-sm btn-primary" href="{% url 'signup' %}" style="margin-top: 5px; width: 100%;">Sign Up</a></small>
+                    <span class="or">or</span>
                     <a href="{% provider_login_url 'google' method='oauth2' %}" class="google-button">
                         <div class="google-box">
                             <img src="{% static 'images/google.jpg'%}" style="width: 5%; height:auto;">
@@ -42,7 +43,7 @@
         margin-bottom: 5px;
     }
     
-    .google-box {
+    .google-box, .btn-primary {
         border: 1px solid #ccc;
         padding: 10px;
         border-radius: 5px;
@@ -51,6 +52,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        width: 100%;
     }
 
     .google-button {
@@ -58,7 +60,7 @@
         display: inline-block;
     }
 
-    .google-button:hover .google-box {
+    .google-button:hover .google-box, .btn-primary:hover {
         background-color: #f1f1f1;
     }
 

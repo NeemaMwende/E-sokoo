@@ -1,12 +1,58 @@
-
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
 {% load static %}
 {% load socialaccount %}
 
+<style>
+    .google-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(3,3,3,0.3);
+        width: 100%;
+    }
+
+    .google-box:hover {
+        background-color: #f1f1f1;
+    }
+
+    .google-box img {
+        width: 40px; /* Adjust the width as needed */
+        height: auto; /* Automatically adjust the height */
+        margin-right: 10px; /* Add some margin for spacing */
+    }
+
+    .google-box-text {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 <div class="container">
-     <div class="mb-3 mt-3 text-center"style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
+     <div class="mb-3 mt-3 text-center" style="padding:10px;border: 1px solid #eee;border-radius:3px; box-shadow: 2px 2px 5px rgba(3,3,3,0.3);">
         <h3><span style="font-size:30px; color:red; font-weight:bold; font-family: 'Roboto', sans-serif;">Create Account</span> <span style="font-size:30px; color:black;margin-left:10px">with E-SOKO</span></h3>
     </div>
 
@@ -14,7 +60,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6" style="padding:10px;border: 1px solid #eee;border-radius:10px; box-shadow: 5px 5px 12px rgba(3,3,3,0.3);">
                                     
-            <form action="" method="post" novalidate   style="padding:10px; font-size:16px;">
+            <form action="" method="post" novalidate style="padding:10px; font-size:16px;">
 
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -22,9 +68,15 @@
                 <br>
                 <hr>
                 <div class="form-group text-center">
-                    <small class="fs-6">Already have an account? <br><a class="btn btn-primary "href="{% url 'login' %}">Login</a></small> 
-                    <small class>or use </small>
-                <a href="{% provider_login_url 'google' method='oauth2' %}"><img src="{% static 'images/google.jpg'%}" style="width: 10%; height:10%"></a> <small class="">to Login</small>
+                    <small class="fs-6">Already have an account? <br><a class="btn btn-primary" href="{% url 'login' %}">Login</a></small> 
+                    <small>or use</small>
+                 
+                    <a href="{% provider_login_url 'google' method='oauth2' %}" class="google-button">
+                        <div class="google-box">
+                            <img src="{% static 'images/google.jpg'%}" style="width: 5%; height:auto;">
+                            <span class="button-text">Login with Google</span>
+                        </div>
+                    </a>
                 </div>
                 <hr>
             </form>
