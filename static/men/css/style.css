@@ -1,0 +1,7 @@
+.product-toolbar {
+    padding: 13px 0;
+}
+
+.product-toolbar.btm-border {
+    border-bottom: 1px solid #dedede;
+}
