@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'tinymce',
-    'cart',
     'django_countries',
     'django.contrib.sites',
     'allauth',
