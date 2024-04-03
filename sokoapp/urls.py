@@ -5,8 +5,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
-    # Other URLs...
+    
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('women/', views.women, name='women'),
@@ -16,8 +17,6 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='registration/logout.html'), name='logout'),
-
-    # Cart URLs
     path('cart/', views.cart_detail, name='cart_detail'),
     path('cart/add/<int:pk>/', views.cart_add, name='cart_add'),
     path('cart/remove/<int:pk>/', views.cart_remove, name='cart_remove'),
