@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'soko.wsgi.application'
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'esoko',
-#         'USER': 'agnes',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'esoko',
+        'USER': 'agnes',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+    }
+}
 
 DATABASES = {
     'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
