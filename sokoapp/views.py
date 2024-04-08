@@ -22,7 +22,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 
 
-# This is your test secret API key.
+
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 

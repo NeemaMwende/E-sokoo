@@ -90,6 +90,7 @@ DATABASES = {
     
 }
 
+
 DATABASES = {
     'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
@@ -181,8 +182,8 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '1095415596020-pduft037kf8rffbah51s7dd51ae8niga.apps.googleusercontent.com',
-            'secret': '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',
+            'client_id': '5402154556-2ibdclpl8i80m7m7hbiv6fivkvou8a91.apps.googleusercontent.com',
+            'secret': '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',
             'key': ''
         }
     }
