@@ -140,7 +140,7 @@ This README provides detailed steps for completing tasks related to cloning, for
 
 1. **Search for an open-source project on GitHub:**
    - Find a project related to your interests by using GitHub's search and filtering options.
-   - I used 'web development' project by 
+   - I used 'web development' project by kit
 
 2. **Explore the project's documentation, issues, and contribution guidelines:**
    - Read the `README.md`, `CONTRIBUTING.md`, and browse the issues tab.
@@ -159,6 +159,6 @@ This README provides detailed steps for completing tasks related to cloning, for
   git push origin main
   ```
 
-- Share the link to your forked repository: 
+- Share the link to your forked repository: https://neemamwende.github.io/E-sokoo/
 
 This assignment provided hands-on experience with Git, GitHub, and open-source practices, covering various aspects essential for software development and collaboration.
