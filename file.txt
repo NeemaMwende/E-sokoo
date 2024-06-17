@@ -3,3 +3,5 @@ Changes in main branch
 =======
 Changes in feature-update branch
 >>>>>>> feature-update
+Changes in main branch
+Changes in feature-update branch
